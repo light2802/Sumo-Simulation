@@ -1,22 +1,4 @@
 #!/usr/bin/env python
-# Eclipse SUMO, Simulation of Urban MObility; see https://eclipse.org/sumo
-# Copyright (C) 2009-2022 German Aerospace Center (DLR) and others.
-# This program and the accompanying materials are made available under the
-# terms of the Eclipse Public License 2.0 which is available at
-# https://www.eclipse.org/legal/epl-2.0/
-# This Source Code may also be made available under the following Secondary
-# Licenses when the conditions for such availability set forth in the Eclipse
-# Public License 2.0 are satisfied: GNU General Public License, version 2
-# or later which is available at
-# https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html
-# SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-or-later
-
-# @file    runner.py
-# @author  Lena Kalleske
-# @author  Daniel Krajzewicz
-# @author  Michael Behrisch
-# @author  Jakob Erdmann
-# @date    2009-03-26
 
 from __future__ import absolute_import
 from __future__ import print_function
@@ -36,6 +18,9 @@ else:
 from sumolib import checkBinary  # noqa
 import traci  # noqa
 
+def generate_networkfile():
+    os.system("netconvert -W --node-files=./data/cross.nod.xml --edge-files=./data/cross.edg.xml --output-file=./new/cross.net.xml")
+    print("Network created\n")
 
 def generate_routefile():
     random.seed(42)  # make tests reproducible
@@ -44,7 +29,9 @@ def generate_routefile():
     pWE = 1. / 10
     pEW = 1. / 11
     pNS = 1. / 30
-    with open("data/cross.rou.xml", "w") as routes:
+    routefile = "new/cross.rou.xml"
+    os.makedirs(os.path.dirname(routefile), exist_ok=True)
+    with open(routefile, "w") as routes:
         print("""<routes>
         <vType id="typeWE" accel="0.8" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="16.67" \
 guiShape="passenger"/>
@@ -77,6 +64,7 @@ guiShape="passenger"/>
 #        <phase duration="31" state="rGrG"/>
 #        <phase duration="6"  state="ryry"/>
 #    </tlLogic>
+    print("Routes created\n")
 
 
 def run():
@@ -120,7 +108,7 @@ if __name__ == "__main__":
 
     # first, generate the route file for this simulation
     generate_routefile()
-
+    generate_networkfile()
     # this is the normal way of using traci. sumo is started as a
     # subprocess and then the python script connects and runs
     traci.start([sumoBinary, "-c", "data/cross.sumocfg",
