@@ -7,6 +7,12 @@ import os
 import sys
 import optparse
 import random
+from itertools import islice
+
+def get_sec(time_str):
+    """Get seconds from time."""
+    h, m, s = time_str.split(':')
+    return int(h) * 3600 + int(m) * 60 + int(s)
 
 # we need to import python modules from the $SUMO_HOME/tools directory
 if 'SUMO_HOME' in os.environ:
@@ -18,42 +24,81 @@ else:
 from sumolib import checkBinary  # noqa
 import traci  # noqa
 
+def add_vehicles(inFileName, outFileName, vehNr):
+    car_count = 0
+    bike_count = 0
+    bus_count = 0
+    truck_count = 0
+
+    with open(inFileName, "r") as datFile:
+        for line in datFile.readlines()[1:]:
+            time, dir, car_curr, bike_curr, bus_curr, truck_curr = line.split(",")
+            if not time:
+                continue
+            time = get_sec(time)
+            car_curr = int(car_curr)
+            bike_curr = int(bike_curr)
+            bus_curr = int(bus_curr)
+            truck_curr = int(truck_curr)
+
+            if car_curr - car_count:
+                print('    <vehicle id="%i" type="car" route="%s" depart="%i" />' % (
+                    vehNr, dir, time), file=outFileName)
+                vehNr += 1
+                car_curr = car_count
+            if bike_curr - bike_count:
+                print('    <vehicle id="%i" type="bike" route="%s" depart="%i" />' % (
+                    vehNr, dir, time), file=outFileName)
+                vehNr += 1
+                bike_curr = bike_count
+            if bus_curr - bus_count:
+                print('    <vehicle id="%i" type="bus" route="%s" depart="%i" />' % (
+                    vehNr, dir, time), file=outFileName)
+                vehNr += 1
+                bus_curr = bus_count
+            if truck_curr - truck_count:
+                 print('    <vehicle id="%i" type="truck" route="%s" depart="%i" />' % (
+                     vehNr, dir, time), file=outFileName)
+                 vehNr += 1
+                 truck_curr = truck_count
+    return vehNr
+        
+
+
 def generate_networkfile():
     os.system("netconvert -W --node-files=./data/cross.nod.xml --edge-files=./data/cross.edg.xml --output-file=./new/cross.net.xml")
     print("Network created\n")
 
 def generate_routefile():
-    random.seed(42)  # make tests reproducible
-    N = 3600  # number of time steps
-    # demand per second from different directions
-    pWE = 1. / 10
-    pEW = 1. / 11
-    pNS = 1. / 30
     routefile = "new/cross.rou.xml"
     os.makedirs(os.path.dirname(routefile), exist_ok=True)
     with open(routefile, "w") as routes:
         print("""<routes>
-        <vType id="typeWE" accel="0.8" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="16.67" \
-guiShape="passenger"/>
-        <vType id="typeNS" accel="0.8" decel="4.5" sigma="0.5" length="7" minGap="3" maxSpeed="25" guiShape="bus"/>
+        <vType id="car" width="10" accel="0.8" decel="4.5" sigma="0.5" length="1" minGap="2.5" maxSpeed="60" guiShape="passenger"/>
+        <vType id="bike" accel="0.8" decel="4.5" sigma="0.5" length="2" minGap="2.5" maxSpeed="80" guiShape="passenger"/>
+        <vType id="bus" accel="0.8" decel="4.5" sigma="0.5" length="6" minGap="3" maxSpeed="40" guiShape="bus"/>
+        <vType id="truck" accel="0.8" decel="4.5" sigma="0.5" length="8" minGap="3" maxSpeed="40" guiShape="bus"/>
+        <route id="RIGHT" edges="51o 1i 2o 52i" />
+        <route id="LEFT" edges="52o 2i 1o 51i" />
+        <route id="UP" edges="53o 3i 4o 54i" />
+        <route id="DOWN" edges="54o 4i 3o 53i" />""", file=routes)
 
-        <route id="right" edges="51o 1i 2o 52i" />
-        <route id="left" edges="52o 2i 1o 51i" />
-        <route id="down" edges="54o 4i 3o 53i" />""", file=routes)
         vehNr = 0
-        for i in range(N):
-            if random.uniform(0, 1) < pWE:
-                print('    <vehicle id="right_%i" type="typeWE" route="right" depart="%i" />' % (
-                    vehNr, i), file=routes)
-                vehNr += 1
-            if random.uniform(0, 1) < pEW:
-                print('    <vehicle id="left_%i" type="typeWE" route="left" depart="%i" />' % (
-                    vehNr, i), file=routes)
-                vehNr += 1
-            if random.uniform(0, 1) < pNS:
-                print('    <vehicle id="down_%i" type="typeNS" route="down" depart="%i" color="1,0,0"/>' % (
-                    vehNr, i), file=routes)
-                vehNr += 1
+        vehNr =  add_vehicles("proj/Jehangir final_timed/j1/j1_11_one.csv", routes, vehNr)
+        
+#        for i in range(N):
+#            if random.uniform(0, 1) < pWE:
+#                print('    <vehicle id="right_%i" type="typeWE" route="right" depart="%i" />' % (
+#                    vehNr, i), file=routes)
+#                vehNr += 1
+#            if random.uniform(0, 1) < pEW:
+#                print('    <vehicle id="left_%i" type="typeWE" route="left" depart="%i" />' % (
+#                    vehNr, i), file=routes)
+#                vehNr += 1
+#            if random.uniform(0, 1) < pNS:
+#                print('    <vehicle id="down_%i" type="typeNS" route="down" depart="%i" color="1,0,0"/>' % (
+#                    vehNr, i), file=routes)
+#                vehNr += 1
         print("</routes>", file=routes)
 
 # The program looks like this
@@ -111,6 +156,6 @@ if __name__ == "__main__":
     generate_networkfile()
     # this is the normal way of using traci. sumo is started as a
     # subprocess and then the python script connects and runs
-    traci.start([sumoBinary, "-c", "data/cross.sumocfg",
+    traci.start([sumoBinary, "--lanechange.duration", "0.1", "-c", "data/cross.sumocfg",
                              "--tripinfo-output", "tripinfo.xml"])
     run()
