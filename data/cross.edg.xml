@@ -1,26 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
-   <edge id="1i" from="1" to="0" priority="78" numLanes="4" speed="19.444" />
-   <edge id="1o" from="0" to="1" priority="46" numLanes="4" speed="11.111" />
+   <edge id="j_up_j" from="j_up" to="j" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_j_up" from="j" to="j_up" priority="46" numLanes="8" speed="11.111" />
+   <edge id="j_down_j" from="j_down" to="j" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_j_down" from="j" to="j_down" priority="46" numLanes="8" speed="11.111" />
+   <edge id="j_left_j" from="j_left" to="j" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_j_left" from="j" to="j_left" priority="46" numLanes="8" speed="11.111" />
+   <edge id="j_right_j" from="j_right" to="j" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_j_right" from="j" to="j_right" priority="46" numLanes="8" speed="11.111" />
+   <edge id="j_up_exit_j_up" from="j_up_exit" to="j_up" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_up_j_up_exit" from="j_up" to="j_up_exit" priority="46" numLanes="8" speed="11.111" />
+   <edge id="j_left_exit_j_left" from="j_left_exit" to="j_left" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_left_j_left_exit" from="j_left" to="j_left_exit" priority="46" numLanes="8" speed="11.111" />
+   <edge id="j_right_exit_j_right" from="j_right_exit" to="j_right" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_right_j_right_exit" from="j_right" to="j_right_exit" priority="46" numLanes="8" speed="11.111" />
 
-   <edge id="2i" from="2" to="0" priority="78" numLanes="4" speed="19.444" />
-   <edge id="2o" from="0" to="2" priority="46" numLanes="4" speed="11.111" />
+   <edge id="j_down_j_a" from="j_down" to="j_a" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_a_j_down" from="j_a" to="j_down" priority="46" numLanes="8" speed="11.111" />
+   <edge id="a_up_j_a" from="a_up" to="j_a" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_a_a_up" from="j_a" to="a_up" priority="46" numLanes="8" speed="11.111" />
 
-   <edge id="3i" from="3" to="0" priority="78" numLanes="4" speed="19.444" />
-   <edge id="3o" from="0" to="3" priority="46" numLanes="4" speed="11.111" />
+   <edge id="a_up_a" from="a_up" to="a" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_a_up" from="a" to="a_up" priority="46" numLanes="8" speed="11.111" />
+   <edge id="a_down_a" from="a_down" to="a" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_a_down" from="a" to="a_down" priority="46" numLanes="8" speed="11.111" />
+   <edge id="a_left_a" from="a_left" to="a" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_a_left" from="a" to="a_left" priority="46" numLanes="8" speed="11.111" />
+   <edge id="a_right_a" from="a_right" to="a" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_a_right" from="a" to="a_right" priority="46" numLanes="8" speed="11.111" />
+   <edge id="a_left_exit_a_left" from="a_left_exit" to="a_left" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_left_a_left_exit" from="a_left" to="a_left_exit" priority="46" numLanes="8" speed="11.111" />
+   <edge id="a_right_exit_a_right" from="a_right_exit" to="a_right" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_right_a_right_exit" from="a_right" to="a_right_exit" priority="46" numLanes="8" speed="11.111" />
 
-   <edge id="4i" from="4" to="0" priority="78" numLanes="4" speed="19.444" />
-   <edge id="4o" from="0" to="4" priority="46" numLanes="4" speed="11.111" />
+   <edge id="a_down_a_r" from="a_down" to="a_r" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_r_a_down" from="a_r" to="a_down" priority="46" numLanes="8" speed="11.111" />
+   <edge id="r_up_a_r" from="r_up" to="a_r" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_r_r_up" from="a_r" to="r_up" priority="46" numLanes="8" speed="11.111" />
 
-   <edge id="51i" from="1" to="51" priority="78" numLanes="4" speed="19.444" />
-   <edge id="51o" from="51" to="1" priority="46" numLanes="4" speed="11.111" />
+   <edge id="r_up_r" from="r_up" to="r" priority="78" numLanes="8" speed="19.444" />
+   <edge id="r_r_up" from="r" to="r_up" priority="46" numLanes="8" speed="11.111" />
+   <edge id="r_down_r" from="r_down" to="r" priority="78" numLanes="8" speed="19.444" />
+   <edge id="r_r_down" from="r" to="r_down" priority="46" numLanes="8" speed="11.111" />
+   <edge id="r_left_r" from="r_left" to="r" priority="78" numLanes="8" speed="19.444" />
+   <edge id="r_r_left" from="r" to="r_left" priority="46" numLanes="8" speed="11.111" />
+   <edge id="r_right_r" from="r_right" to="r" priority="78" numLanes="8" speed="19.444" />
+   <edge id="r_r_right" from="r" to="r_right" priority="46" numLanes="8" speed="11.111" />
+   <edge id="a_r_r_up" from="a_r" to="r_up" priority="78" numLanes="8" speed="19.444" />
+   <edge id="r_up_a_r" from="r_up" to="a_r" priority="46" numLanes="8" speed="11.111" />
+   <edge id="r_left_exit_r_left" from="r_left_exit" to="r_left" priority="78" numLanes="8" speed="19.444" />
+   <edge id="r_left_r_left_exit" from="r_left" to="r_left_exit" priority="46" numLanes="8" speed="11.111" />
+   <edge id="r_right_exit_r_right" from="r_right_exit" to="r_right" priority="78" numLanes="8" speed="19.444" />
+   <edge id="r_right_r_right_exit" from="r_right" to="r_right_exit" priority="46" numLanes="8" speed="11.111" />
+   <edge id="r_down_exit_r_down" from="r_down_exit" to="r_down" priority="78" numLanes="8" speed="19.444" />
+   <edge id="r_down_r_down_exit" from="r_down" to="r_down_exit" priority="46" numLanes="8" speed="11.111" />
 
-   <edge id="52i" from="2" to="52" priority="78" numLanes="4" speed="19.444" />
-   <edge id="52o" from="52" to="2" priority="46" numLanes="4" speed="11.111" />
-
-   <edge id="53i" from="3" to="53" priority="78" numLanes="4" speed="19.444" />
-   <edge id="53o" from="53" to="3" priority="46" numLanes="4" speed="11.111" />
-
-   <edge id="54i" from="4" to="54" priority="78" numLanes="4" speed="19.444" />
-   <edge id="54o" from="54" to="4" priority="46" numLanes="4" speed="11.111" />
 </edges>
