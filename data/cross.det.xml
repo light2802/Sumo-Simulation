@@ -1,1 +1,241 @@
-<e1Detector id="0" lane="j_j_up_0" pos="450" freq="30" file="cross.out" friendlyPos="x"/>
+<additional>
+<e3Detector id="j_up" freq="30" file="cross.out">
+    <detEntry lane="j_up_j_0" pos="400" friendlyPos="x" />
+    <detEntry lane="j_up_j_1" pos="400" friendlyPos="x" />
+    <detEntry lane="j_up_j_2" pos="400" friendlyPos="x" />
+    <detEntry lane="j_up_j_3" pos="400" friendlyPos="x" />
+    <detEntry lane="j_up_j_4" pos="400" friendlyPos="x" />
+    <detEntry lane="j_up_j_5" pos="400" friendlyPos="x" />
+    <detEntry lane="j_up_j_6" pos="400" friendlyPos="x" />
+    <detEntry lane="j_up_j_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="j_up_j_0" pos="410" friendlyPos="x" />
+    <detExit lane="j_up_j_1" pos="410" friendlyPos="x" />
+    <detExit lane="j_up_j_2" pos="410" friendlyPos="x" />
+    <detExit lane="j_up_j_3" pos="410" friendlyPos="x" />
+    <detExit lane="j_up_j_4" pos="410" friendlyPos="x" />
+    <detExit lane="j_up_j_5" pos="410" friendlyPos="x" />
+    <detExit lane="j_up_j_6" pos="410" friendlyPos="x" />
+    <detExit lane="j_up_j_7" pos="410" friendlyPos="x" />
+</e3Detector>
+
+<e3Detector id="j_down" freq="30" file="cross.out">
+    <detEntry lane="j_down_j_0" pos="400" friendlyPos="x" />
+    <detEntry lane="j_down_j_1" pos="400" friendlyPos="x" />
+    <detEntry lane="j_down_j_2" pos="400" friendlyPos="x" />
+    <detEntry lane="j_down_j_3" pos="400" friendlyPos="x" />
+    <detEntry lane="j_down_j_4" pos="400" friendlyPos="x" />
+    <detEntry lane="j_down_j_5" pos="400" friendlyPos="x" />
+    <detEntry lane="j_down_j_6" pos="400" friendlyPos="x" />
+    <detEntry lane="j_down_j_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="j_down_j_0" pos="410" friendlyPos="x" />
+    <detExit lane="j_down_j_1" pos="410" friendlyPos="x" />
+    <detExit lane="j_down_j_2" pos="410" friendlyPos="x" />
+    <detExit lane="j_down_j_3" pos="410" friendlyPos="x" />
+    <detExit lane="j_down_j_4" pos="410" friendlyPos="x" />
+    <detExit lane="j_down_j_5" pos="410" friendlyPos="x" />
+    <detExit lane="j_down_j_6" pos="410" friendlyPos="x" />
+    <detExit lane="j_down_j_7" pos="410" friendlyPos="x" />
+</e3Detector>
+
+<e3Detector id="j_left" freq="30" file="cross.out">
+    <detEntry lane="j_left_j_0" pos="400" friendlyPos="x" />
+    <detEntry lane="j_left_j_1" pos="400" friendlyPos="x" />
+    <detEntry lane="j_left_j_2" pos="400" friendlyPos="x" />
+    <detEntry lane="j_left_j_3" pos="400" friendlyPos="x" />
+    <detEntry lane="j_left_j_4" pos="400" friendlyPos="x" />
+    <detEntry lane="j_left_j_5" pos="400" friendlyPos="x" />
+    <detEntry lane="j_left_j_6" pos="400" friendlyPos="x" />
+    <detEntry lane="j_left_j_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="j_left_j_0" pos="410" friendlyPos="x" />
+    <detExit lane="j_left_j_1" pos="410" friendlyPos="x" />
+    <detExit lane="j_left_j_2" pos="410" friendlyPos="x" />
+    <detExit lane="j_left_j_3" pos="410" friendlyPos="x" />
+    <detExit lane="j_left_j_4" pos="410" friendlyPos="x" />
+    <detExit lane="j_left_j_5" pos="410" friendlyPos="x" />
+    <detExit lane="j_left_j_6" pos="410" friendlyPos="x" />
+    <detExit lane="j_left_j_7" pos="410" friendlyPos="x" />
+</e3Detector>
+
+<e3Detector id="j_right" freq="30" file="cross.out">
+    <detEntry lane="j_right_j_0" pos="400" friendlyPos="x" />
+    <detEntry lane="j_right_j_1" pos="400" friendlyPos="x" />
+    <detEntry lane="j_right_j_2" pos="400" friendlyPos="x" />
+    <detEntry lane="j_right_j_3" pos="400" friendlyPos="x" />
+    <detEntry lane="j_right_j_4" pos="400" friendlyPos="x" />
+    <detEntry lane="j_right_j_5" pos="400" friendlyPos="x" />
+    <detEntry lane="j_right_j_6" pos="400" friendlyPos="x" />
+    <detEntry lane="j_right_j_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="j_right_j_0" pos="410" friendlyPos="x" />
+    <detExit lane="j_right_j_1" pos="410" friendlyPos="x" />
+    <detExit lane="j_right_j_2" pos="410" friendlyPos="x" />
+    <detExit lane="j_right_j_3" pos="410" friendlyPos="x" />
+    <detExit lane="j_right_j_4" pos="410" friendlyPos="x" />
+    <detExit lane="j_right_j_5" pos="410" friendlyPos="x" />
+    <detExit lane="j_right_j_6" pos="410" friendlyPos="x" />
+    <detExit lane="j_right_j_7" pos="410" friendlyPos="x" />
+</e3Detector>
+
+<e3Detector id="a_up" freq="30" file="cross.out">
+    <detEntry lane="a_up_a_0" pos="400" friendlyPos="x" />
+    <detEntry lane="a_up_a_1" pos="400" friendlyPos="x" />
+    <detEntry lane="a_up_a_2" pos="400" friendlyPos="x" />
+    <detEntry lane="a_up_a_3" pos="400" friendlyPos="x" />
+    <detEntry lane="a_up_a_4" pos="400" friendlyPos="x" />
+    <detEntry lane="a_up_a_5" pos="400" friendlyPos="x" />
+    <detEntry lane="a_up_a_6" pos="400" friendlyPos="x" />
+    <detEntry lane="a_up_a_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="a_up_a_0" pos="410" friendlyPos="x" />
+    <detExit lane="a_up_a_1" pos="410" friendlyPos="x" />
+    <detExit lane="a_up_a_2" pos="410" friendlyPos="x" />
+    <detExit lane="a_up_a_3" pos="410" friendlyPos="x" />
+    <detExit lane="a_up_a_4" pos="410" friendlyPos="x" />
+    <detExit lane="a_up_a_5" pos="410" friendlyPos="x" />
+    <detExit lane="a_up_a_6" pos="410" friendlyPos="x" />
+    <detExit lane="a_up_a_7" pos="410" friendlyPos="x" />
+</e3Detector>
+
+<e3Detector id="a_down" freq="30" file="cross.out">
+    <detEntry lane="a_down_a_0" pos="400" friendlyPos="x" />
+    <detEntry lane="a_down_a_1" pos="400" friendlyPos="x" />
+    <detEntry lane="a_down_a_2" pos="400" friendlyPos="x" />
+    <detEntry lane="a_down_a_3" pos="400" friendlyPos="x" />
+    <detEntry lane="a_down_a_4" pos="400" friendlyPos="x" />
+    <detEntry lane="a_down_a_5" pos="400" friendlyPos="x" />
+    <detEntry lane="a_down_a_6" pos="400" friendlyPos="x" />
+    <detEntry lane="a_down_a_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="a_down_a_0" pos="410" friendlyPos="x" />
+    <detExit lane="a_down_a_1" pos="410" friendlyPos="x" />
+    <detExit lane="a_down_a_2" pos="410" friendlyPos="x" />
+    <detExit lane="a_down_a_3" pos="410" friendlyPos="x" />
+    <detExit lane="a_down_a_4" pos="410" friendlyPos="x" />
+    <detExit lane="a_down_a_5" pos="410" friendlyPos="x" />
+    <detExit lane="a_down_a_6" pos="410" friendlyPos="x" />
+    <detExit lane="a_down_a_7" pos="410" friendlyPos="x" />
+</e3Detector>
+
+<e3Detector id="a_left" freq="30" file="cross.out">
+    <detEntry lane="a_left_a_0" pos="400" friendlyPos="x" />
+    <detEntry lane="a_left_a_1" pos="400" friendlyPos="x" />
+    <detEntry lane="a_left_a_2" pos="400" friendlyPos="x" />
+    <detEntry lane="a_left_a_3" pos="400" friendlyPos="x" />
+    <detEntry lane="a_left_a_4" pos="400" friendlyPos="x" />
+    <detEntry lane="a_left_a_5" pos="400" friendlyPos="x" />
+    <detEntry lane="a_left_a_6" pos="400" friendlyPos="x" />
+    <detEntry lane="a_left_a_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="a_left_a_0" pos="410" friendlyPos="x" />
+    <detExit lane="a_left_a_1" pos="410" friendlyPos="x" />
+    <detExit lane="a_left_a_2" pos="410" friendlyPos="x" />
+    <detExit lane="a_left_a_3" pos="410" friendlyPos="x" />
+    <detExit lane="a_left_a_4" pos="410" friendlyPos="x" />
+    <detExit lane="a_left_a_5" pos="410" friendlyPos="x" />
+    <detExit lane="a_left_a_6" pos="410" friendlyPos="x" />
+    <detExit lane="a_left_a_7" pos="410" friendlyPos="x" />
+</e3Detector>
+
+<e3Detector id="a_right" freq="30" file="cross.out">
+    <detEntry lane="a_right_a_0" pos="400" friendlyPos="x" />
+    <detEntry lane="a_right_a_1" pos="400" friendlyPos="x" />
+    <detEntry lane="a_right_a_2" pos="400" friendlyPos="x" />
+    <detEntry lane="a_right_a_3" pos="400" friendlyPos="x" />
+    <detEntry lane="a_right_a_4" pos="400" friendlyPos="x" />
+    <detEntry lane="a_right_a_5" pos="400" friendlyPos="x" />
+    <detEntry lane="a_right_a_6" pos="400" friendlyPos="x" />
+    <detEntry lane="a_right_a_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="a_right_a_0" pos="410" friendlyPos="x" />
+    <detExit lane="a_right_a_1" pos="410" friendlyPos="x" />
+    <detExit lane="a_right_a_2" pos="410" friendlyPos="x" />
+    <detExit lane="a_right_a_3" pos="410" friendlyPos="x" />
+    <detExit lane="a_right_a_4" pos="410" friendlyPos="x" />
+    <detExit lane="a_right_a_5" pos="410" friendlyPos="x" />
+    <detExit lane="a_right_a_6" pos="410" friendlyPos="x" />
+    <detExit lane="a_right_a_7" pos="410" friendlyPos="x" />
+</e3Detector>
+
+<e3Detector id="r_up" freq="30" file="cross.out">
+    <detEntry lane="r_up_r_0" pos="400" friendlyPos="x" />
+    <detEntry lane="r_up_r_1" pos="400" friendlyPos="x" />
+    <detEntry lane="r_up_r_2" pos="400" friendlyPos="x" />
+    <detEntry lane="r_up_r_3" pos="400" friendlyPos="x" />
+    <detEntry lane="r_up_r_4" pos="400" friendlyPos="x" />
+    <detEntry lane="r_up_r_5" pos="400" friendlyPos="x" />
+    <detEntry lane="r_up_r_6" pos="400" friendlyPos="x" />
+    <detEntry lane="r_up_r_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="r_up_r_0" pos="410" friendlyPos="x" />
+    <detExit lane="r_up_r_1" pos="410" friendlyPos="x" />
+    <detExit lane="r_up_r_2" pos="410" friendlyPos="x" />
+    <detExit lane="r_up_r_3" pos="410" friendlyPos="x" />
+    <detExit lane="r_up_r_4" pos="410" friendlyPos="x" />
+    <detExit lane="r_up_r_5" pos="410" friendlyPos="x" />
+    <detExit lane="r_up_r_6" pos="410" friendlyPos="x" />
+    <detExit lane="r_up_r_7" pos="410" friendlyPos="x" />
+</e3Detector>
+
+<e3Detector id="r_down" freq="30" file="cross.out">
+    <detEntry lane="r_down_r_0" pos="400" friendlyPos="x" />
+    <detEntry lane="r_down_r_1" pos="400" friendlyPos="x" />
+    <detEntry lane="r_down_r_2" pos="400" friendlyPos="x" />
+    <detEntry lane="r_down_r_3" pos="400" friendlyPos="x" />
+    <detEntry lane="r_down_r_4" pos="400" friendlyPos="x" />
+    <detEntry lane="r_down_r_5" pos="400" friendlyPos="x" />
+    <detEntry lane="r_down_r_6" pos="400" friendlyPos="x" />
+    <detEntry lane="r_down_r_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="r_down_r_0" pos="410" friendlyPos="x" />
+    <detExit lane="r_down_r_1" pos="410" friendlyPos="x" />
+    <detExit lane="r_down_r_2" pos="410" friendlyPos="x" />
+    <detExit lane="r_down_r_3" pos="410" friendlyPos="x" />
+    <detExit lane="r_down_r_4" pos="410" friendlyPos="x" />
+    <detExit lane="r_down_r_5" pos="410" friendlyPos="x" />
+    <detExit lane="r_down_r_6" pos="410" friendlyPos="x" />
+    <detExit lane="r_down_r_7" pos="410" friendlyPos="x" />
+</e3Detector>
+
+<e3Detector id="r_left" freq="30" file="cross.out">
+    <detEntry lane="r_left_r_0" pos="400" friendlyPos="x" />
+    <detEntry lane="r_left_r_1" pos="400" friendlyPos="x" />
+    <detEntry lane="r_left_r_2" pos="400" friendlyPos="x" />
+    <detEntry lane="r_left_r_3" pos="400" friendlyPos="x" />
+    <detEntry lane="r_left_r_4" pos="400" friendlyPos="x" />
+    <detEntry lane="r_left_r_5" pos="400" friendlyPos="x" />
+    <detEntry lane="r_left_r_6" pos="400" friendlyPos="x" />
+    <detEntry lane="r_left_r_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="r_left_r_0" pos="410" friendlyPos="x" />
+    <detExit lane="r_left_r_1" pos="410" friendlyPos="x" />
+    <detExit lane="r_left_r_2" pos="410" friendlyPos="x" />
+    <detExit lane="r_left_r_3" pos="410" friendlyPos="x" />
+    <detExit lane="r_left_r_4" pos="410" friendlyPos="x" />
+    <detExit lane="r_left_r_5" pos="410" friendlyPos="x" />
+    <detExit lane="r_left_r_6" pos="410" friendlyPos="x" />
+    <detExit lane="r_left_r_7" pos="410" friendlyPos="x" />
+</e3Detector>
+
+<e3Detector id="r_right" freq="30" file="cross.out">
+    <detEntry lane="r_right_r_0" pos="400" friendlyPos="x" />
+    <detEntry lane="r_right_r_1" pos="400" friendlyPos="x" />
+    <detEntry lane="r_right_r_2" pos="400" friendlyPos="x" />
+    <detEntry lane="r_right_r_3" pos="400" friendlyPos="x" />
+    <detEntry lane="r_right_r_4" pos="400" friendlyPos="x" />
+    <detEntry lane="r_right_r_5" pos="400" friendlyPos="x" />
+    <detEntry lane="r_right_r_6" pos="400" friendlyPos="x" />
+    <detEntry lane="r_right_r_7" pos="400" friendlyPos="x" />
+
+    <detExit lane="r_right_r_0" pos="410" friendlyPos="x" />
+    <detExit lane="r_right_r_1" pos="410" friendlyPos="x" />
+    <detExit lane="r_right_r_2" pos="410" friendlyPos="x" />
+    <detExit lane="r_right_r_3" pos="410" friendlyPos="x" />
+    <detExit lane="r_right_r_4" pos="410" friendlyPos="x" />
+    <detExit lane="r_right_r_5" pos="410" friendlyPos="x" />
+    <detExit lane="r_right_r_6" pos="410" friendlyPos="x" />
+    <detExit lane="r_right_r_7" pos="410" friendlyPos="x" />
+</e3Detector>
+</additional>

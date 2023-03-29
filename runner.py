@@ -117,20 +117,10 @@ def generate_routefile(date):
 
 def run():
     """execute the TraCI control loop"""
-    step = 0
     # we start with phase 2 where EW has green
-    traci.trafficlight.setPhase("j", 2)
+    traci.setOrder(1)
     while traci.simulation.getMinExpectedNumber() > 0:
         traci.simulationStep()
-        if traci.trafficlight.getPhase("j") == 2:
-            # we are not already switching
-            if traci.inductionloop.getLastStepVehicleNumber("0") > 0:
-                # there is a vehicle from the north, switch
-                traci.trafficlight.setPhase("j", 3)
-            else:
-                # otherwise try to keep green for EW
-                traci.trafficlight.setPhase("j", 2)
-        step += 1
     traci.close()
     sys.stdout.flush()
 
@@ -158,10 +148,11 @@ if __name__ == "__main__":
 
     date = options.date
     # first, generate the route file for this simulation
-    #generate_networkfile()
+    generate_networkfile()
     #generate_routefile(date)
     # this is the normal way of using traci. sumo is started as a
     # subprocess and then the python script connects and runs
     traci.start([sumoBinary, "--lanechange.duration", "0.1", "-c", "data/cross.sumocfg",
-                             "--tripinfo-output", "tripinfo.xml"])
+                             "--tripinfo-output", "tripinfo.xml",
+                            "--num-clients", "2"], port=8000)
     run()
