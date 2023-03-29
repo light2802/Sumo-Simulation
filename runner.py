@@ -131,6 +131,8 @@ def get_options():
                          default=False, help="run the commandline version of sumo")
     optParser.add_option("--date", action="store_true", default=11,
                             help="give date for simulation")
+    optParser.add_option("--numClients", action="store_true", default="2",
+                            help="Number of clients in simulation")
     options, args = optParser.parse_args()
     return options
 
@@ -154,5 +156,5 @@ if __name__ == "__main__":
     # subprocess and then the python script connects and runs
     traci.start([sumoBinary, "--lanechange.duration", "0.1", "-c", "data/cross.sumocfg",
                              "--tripinfo-output", "tripinfo.xml",
-                            "--num-clients", "2"], port=8000)
+                            "--num-clients", options.numClients], port = 8813)
     run()
