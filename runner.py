@@ -156,5 +156,7 @@ if __name__ == "__main__":
     # subprocess and then the python script connects and runs
     traci.start([sumoBinary, "--lanechange.duration", "0.1", "-c", "data/cross.sumocfg",
                              "--tripinfo-output", "tripinfo.xml",
+    #                         "--full-output", "sumo.log",
+                            "--duration-log.statistics",
                             "--num-clients", options.numClients], port = 8813)
     run()

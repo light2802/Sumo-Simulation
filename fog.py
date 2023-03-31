@@ -54,7 +54,7 @@ def run(host, port):
     		skip = 0
     	else:
     		#traci.simulationStep()
-    		simulationDelay(90)
+    		simulationDelay(130)
 
 def get_options():
     optParser = optparse.OptionParser()
