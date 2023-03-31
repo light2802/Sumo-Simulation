@@ -22,10 +22,12 @@ else:
     sys.exit("please declare environment variable 'SUMO_HOME'")
 
 def add_vehicles(inFileName, junction, outFileName, vehNr):
-    car_count = 0
-    bike_count = 0
-    bus_count = 0
-    truck_count = 0
+    #[u, d, l, r]
+    car_count = {"UP" : 0, "DOWN" : 0, "LEFT" : 0, "RIGHT" : 0}
+    bike_count = {"UP" : 0, "DOWN" : 0, "LEFT" : 0, "RIGHT" : 0}
+    bus_count = {"UP" : 0, "DOWN" : 0, "LEFT" : 0, "RIGHT" : 0}
+    truck_count = {"UP" : 0, "DOWN" : 0, "LEFT" : 0, "RIGHT" : 0}
+
     if not os.path.exists(inFileName):
         return vehNr
     with open(inFileName, "r") as datFile:
@@ -39,27 +41,28 @@ def add_vehicles(inFileName, junction, outFileName, vehNr):
             bus_curr = int(bus_curr)
             truck_curr = int(truck_curr)
 
-            if car_curr - car_count:
+            while car_curr - car_count[direction] > 0:
                 print('    <vehicle id="%i" type="car" route="%s_%s" depart="%i" />' % (
                     vehNr, junction, direction, time), file=outFileName)
                 vehNr += 1
-                car_curr = car_count
-            if bike_curr - bike_count:
+                car_count[direction] += 1
+            while bike_curr - bike_count[direction] > 0:
                 print('    <vehicle id="%i" type="bike" route="%s_%s" depart="%i" />' % (
                     vehNr, junction, direction, time), file=outFileName)
                 vehNr += 1
-                bike_curr = bike_count
-            if bus_curr - bus_count:
+                bike_count[direction] += 1
+            while bus_curr - bus_count[direction] > 0:
                 print('    <vehicle id="%i" type="bus" route="%s_%s" depart="%i" />' % (
                     vehNr, junction, direction, time), file=outFileName)
                 vehNr += 1
-                bus_curr = bus_count
-            if truck_curr - truck_count:
+                bus_count[direction] += 1
+            while truck_curr - truck_count[direction] > 0:
                  print('    <vehicle id="%i" type="truck" route="%s_%s" depart="%i" />' % (
                      vehNr, junction, direction, time), file=outFileName)
                  vehNr += 1
-                 truck_curr = truck_count
-    print("Added ", inFileName)
+                 truck_count[direction] += 1
+    print(truck_count)
+    print("Added %i vehicles from" % (vehNr), inFileName)
     return vehNr
 
 def generate_networkfile():
