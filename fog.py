@@ -41,11 +41,12 @@ def run(host, port):
             phases.append(traci.trafficlight.Phase(times[7], state_right_down_yellow, 0, 0))
             logic = traci.trafficlight.Logic("0", 0, 0, phases)
             traci.trafficlight.setProgramLogic(j, logic)
-            return
+            
         baseTimer = 120
         timeLimits = [10, 50]
         vehicles = getJunctionCount(j)
         totalVehicles = sum(vehicles)
+        
     	#TODO Make modular function for setting traffic light time
         if(totalVehicles != 0):
             t = [(i / totalVehicles) * baseTimer if timeLimits[0] < (i / totalVehicles) * baseTimer < timeLimits[1] else min(timeLimits, key=lambda x: abs(x - (i / totalVehicles) * baseTimer)) for i in vehicles]
@@ -93,5 +94,4 @@ def get_options():
 # this is the main entry point of this script
 if __name__ == "__main__":
     options = get_options()
-
     run("10.100.108.174", 8813)
