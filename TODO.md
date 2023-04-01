@@ -1,14 +1,14 @@
-##TODO
+## TODO
 
-###Modular
+### Modular
 - [ ]	Shift network and traffic generation code from runnerpy to another script
 - [ ]	Automate traffic generation and sorting the xml in above script
 
-###Test
+### Test
 - [ ]	Test the code for all days
 - [ ]	Get results for average vehicle waiting time
 
-###Design
+### Design
 - [ ]	Add Cloud
 	- [ ]	Add cloud script
 	- [ ]	Include density prediction model in above
