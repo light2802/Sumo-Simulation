@@ -1,7 +1,7 @@
 import traci
 import optparse
-
-
+import pandas as pd
+import datetime
 
 def run(host, port):
     traci.init(host = host, port = port)
@@ -66,9 +66,73 @@ def run(host, port):
             traci.trafficlight.setProgramLogic(j, logic)
         return
         
+    def getFailureTime():
+        #[date, hour]
+        curDate = datetime.datetime.now().strftime('%m-%d-%Y') 
+        curHour = datetime.datetime.now().strftime('%H:%M')
+        curHour += ":00"
+        value = [curDate, curHour]
+        return value
+    
+    def getFailureNode(ID):
+        if ID == "j":
+            #[(id, dir), (id, dir), ...]
+            return [(4,4), (3,1), (2,2), (3,2)]
+        elif ID == "a":
+            return [(1,4), (0,2), (1,3), (0,1)]
+        else:
+            return [(7,4), (6,1), (5,2), (6,4)]
+    
+    def getPredictions(IDS, times):
+        pred = []
+        for i in range(4):
+            vehicles = data.loc[(data['Junction'] == IDS[i][0]) & (data['Direction'] == IDS[i][1]) &
+                                (data['Date'] == times[0]) & (data['Time'] == times[1])]
+            predicted = vehicles.iloc[0]['predicted']
+            pred.append(predicted)
+        return pred
+
+    def updatePredictedSignalTimes(j, predict):
+        #TODO predict contains 4 elements, add U/D R/L based on structure in SUMO to keep 2 values in vehicles
+        baseTimer = 120
+        timeLimits = [10, 50]
+        vehicles = predict
+        totalVehicles = sum(vehicles)
+        
+        if(totalVehicles != 0):
+            t = [(i / totalVehicles) * baseTimer if timeLimits[0] < (i / totalVehicles) * baseTimer < timeLimits[1] else min(timeLimits, key=lambda x: abs(x - (i / totalVehicles) * baseTimer)) for i in vehicles]
+            print("Vehicles:", vehicles)
+            print("Corresponsing times:", t)
+            phases = []
+            phases.append(traci.trafficlight.Phase(t[0], state_up_down_green, 0, 0))
+            phases.append(traci.trafficlight.Phase(5, state_up_down_yellow, 0, 0))
+            phases.append(traci.trafficlight.Phase(5, state_up_left_green, 0, 0))
+            phases.append(traci.trafficlight.Phase(5, state_up_left_yellow, 0, 0))
+            phases.append(traci.trafficlight.Phase(t[1], state_right_left_green, 0, 0))
+            phases.append(traci.trafficlight.Phase(5, state_right_left_yellow, 0, 0))
+            phases.append(traci.trafficlight.Phase(5, state_right_down_green, 0, 0))
+            phases.append(traci.trafficlight.Phase(5, state_right_down_yellow, 0, 0))
+
+            logic = traci.trafficlight.Logic("0", 0, 0, phases)
+            traci.trafficlight.setProgramLogic(j, logic)
+
     skip = 1
+    down = 0
+    data = pd.read_csv("./predictions/BTPROJ_predictions_knn.csv")
     #Start simulation
     while traci.simulation.getMinExpectedNumber()>0:
+        if down:
+            #TODO add code to figure out which junction is down
+            ID = "j"
+            times = getFailureTime()
+            IDS = getFailureNode(ID)
+            predict = getPredictions(IDS, times)
+            updatePredictedSignalTimes(ID, predict)
+            #call the other nodes that are not down
+            updateSignalTimes("a")
+            updateSignalTimes("r")
+            simulationDelay(300)
+
         if skip :
             updateSignalTimes("j", [30,5,5,5,30,5,5,5])
             updateSignalTimes("a", [30,5,5,5,30,5,5,5])
