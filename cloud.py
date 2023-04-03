@@ -3,6 +3,8 @@ import optparse
 import pandas as pd
 import datetime
 
+DOWN_ID = "j"
+
 def run(host, port):
     traci.init(host = host, port = port)
     traci.setOrder(2)
@@ -18,6 +20,7 @@ def run(host, port):
 
     #Get vehicle count for the jucntion with id jId
     def getJunctionCount(jId):
+        simulationDelay(3)
         u = traci.multientryexit.getLastIntervalVehicleSum(jId + "_up")
         d = traci.multientryexit.getLastIntervalVehicleSum(jId + "_down")
         r = traci.multientryexit.getLastIntervalVehicleSum(jId + "_right")
@@ -68,6 +71,8 @@ def run(host, port):
         
     def getFailureTime():
         #[date, hour]
+        #traci.simulation.getTime()
+
         curDate = datetime.datetime.now().strftime('%m-%d-%Y') 
         curHour = datetime.datetime.now().strftime('%H:%M')
         curHour += ":00"
@@ -121,9 +126,9 @@ def run(host, port):
     data = pd.read_csv("./predictions/BTPROJ_predictions_knn.csv")
     #Start simulation
     while traci.simulation.getMinExpectedNumber()>0:
+        # Add prob. of downing a fog instead of a flag
         if down:
-            #TODO add code to figure out which junction is down
-            ID = "j"
+            ID = DOWN_ID
             times = getFailureTime()
             IDS = getFailureNode(ID)
             predict = getPredictions(IDS, times)
@@ -158,4 +163,4 @@ def get_options():
 # this is the main entry point of this script
 if __name__ == "__main__":
     options = get_options()
-    run("10.100.108.174", 8813)
+    run("10.100.103.228", 8813)
