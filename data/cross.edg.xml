@@ -12,13 +12,11 @@
    <edge id="j_up_j_up_exit" from="j_up" to="j_up_exit" priority="46" numLanes="8" speed="11.111" />
    <edge id="j_left_exit_j_left" from="j_left_exit" to="j_left" priority="78" numLanes="8" speed="19.444" />
    <edge id="j_left_j_left_exit" from="j_left" to="j_left_exit" priority="46" numLanes="8" speed="11.111" />
-   <edge id="j_right_exit_j_right" from="j_right_exit" to="j_right" priority="78" numLanes="8" speed="19.444" />
-   <edge id="j_right_j_right_exit" from="j_right" to="j_right_exit" priority="46" numLanes="8" speed="11.111" />
 
-   <edge id="j_down_j_a" from="j_down" to="j_a" priority="78" numLanes="8" speed="19.444" />
-   <edge id="j_a_j_down" from="j_a" to="j_down" priority="46" numLanes="8" speed="11.111" />
-   <edge id="a_up_j_a" from="a_up" to="j_a" priority="78" numLanes="8" speed="19.444" />
-   <edge id="j_a_a_up" from="j_a" to="a_up" priority="46" numLanes="8" speed="11.111" />
+   <edge id="a_left_a_j" from="a_left" to="a_j" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_j_a_left" from="a_j" to="a_left" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_right_a_j" from="j_right" to="a_j" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_j_j_right" from="a_j" to="j_right" priority="46" numLanes="8" speed="11.111" />
 
    <edge id="a_up_a" from="a_up" to="a" priority="78" numLanes="8" speed="19.444" />
    <edge id="a_a_up" from="a" to="a_up" priority="46" numLanes="8" speed="11.111" />
@@ -28,15 +26,17 @@
    <edge id="a_a_left" from="a" to="a_left" priority="46" numLanes="8" speed="11.111" />
    <edge id="a_right_a" from="a_right" to="a" priority="78" numLanes="8" speed="19.444" />
    <edge id="a_a_right" from="a" to="a_right" priority="46" numLanes="8" speed="11.111" />
-   <edge id="a_left_exit_a_left" from="a_left_exit" to="a_left" priority="78" numLanes="8" speed="19.444" />
-   <edge id="a_left_a_left_exit" from="a_left" to="a_left_exit" priority="46" numLanes="8" speed="11.111" />
    <edge id="a_right_exit_a_right" from="a_right_exit" to="a_right" priority="78" numLanes="8" speed="19.444" />
    <edge id="a_right_a_right_exit" from="a_right" to="a_right_exit" priority="46" numLanes="8" speed="11.111" />
-
-   <edge id="a_down_a_r" from="a_down" to="a_r" priority="78" numLanes="8" speed="19.444" />
-   <edge id="a_r_a_down" from="a_r" to="a_down" priority="46" numLanes="8" speed="11.111" />
-   <edge id="r_up_a_r" from="r_up" to="a_r" priority="78" numLanes="8" speed="19.444" />
-   <edge id="a_r_r_up" from="a_r" to="r_up" priority="46" numLanes="8" speed="11.111" />
+   <edge id="a_up_exit_a_up" from="a_up_exit" to="a_up" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_up_a_up_exit" from="a_up" to="a_up_exit" priority="46" numLanes="8" speed="11.111" />
+   <edge id="a_down_exit_a_down" from="a_down_exit" to="a_down" priority="78" numLanes="8" speed="19.444" />
+   <edge id="a_down_a_down_exit" from="a_down" to="a_down_exit" priority="46" numLanes="8" speed="11.111" />
+   
+   <edge id="j_down_j_r" from="j_down" to="j_r" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_r_j_down" from="j_r" to="j_down" priority="46" numLanes="8" speed="11.111" />
+   <edge id="r_up_j_r" from="r_up" to="j_r" priority="78" numLanes="8" speed="19.444" />
+   <edge id="j_r_r_up" from="j_r" to="r_up" priority="46" numLanes="8" speed="11.111" />
 
    <edge id="r_up_r" from="r_up" to="r" priority="78" numLanes="8" speed="19.444" />
    <edge id="r_r_up" from="r" to="r_up" priority="46" numLanes="8" speed="11.111" />
@@ -46,8 +46,6 @@
    <edge id="r_r_left" from="r" to="r_left" priority="46" numLanes="8" speed="11.111" />
    <edge id="r_right_r" from="r_right" to="r" priority="78" numLanes="8" speed="19.444" />
    <edge id="r_r_right" from="r" to="r_right" priority="46" numLanes="8" speed="11.111" />
-   <edge id="a_r_r_up" from="a_r" to="r_up" priority="78" numLanes="8" speed="19.444" />
-   <edge id="r_up_a_r" from="r_up" to="a_r" priority="46" numLanes="8" speed="11.111" />
    <edge id="r_left_exit_r_left" from="r_left_exit" to="r_left" priority="78" numLanes="8" speed="19.444" />
    <edge id="r_left_r_left_exit" from="r_left" to="r_left_exit" priority="46" numLanes="8" speed="11.111" />
    <edge id="r_right_exit_r_right" from="r_right_exit" to="r_right" priority="78" numLanes="8" speed="19.444" />

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <nodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
 
-   <!--Jahangit chowk-->
-   <node id="j" x="0.0" y="1020.0"  type="traffic_light_right_on_red"/>
-   <node id="j_left" x="-500.0" y="1020.0" type="priority"/>
-   <node id="j_right" x="+500.0" y="1020.0" type="priority"/>
-   <node id="j_down" x="0.0" y="520.0" type="priority"/>
-   <node id="j_up" x="0.0" y="1520.0" type="priority"/>
-   <node id="j_left_exit" x="-510.0" y="1020.0" type="priority"/>
-   <node id="j_right_exit" x="+510.0" y="1020.0" type="priority"/>
-   <node id="j_up_exit" x="0.0" y="1530.0" type="priority"/>  
-
-   <node id="j_a" x="0.0" y="510.0" type="priority"/>
-
    <!--Alankar chowk-->
-   <node id="a" x="0.0" y="0.0"  type="traffic_light_right_on_red"/>
-   <node id="a_left" x="-500.0" y="0.0" type="priority"/>
-   <node id="a_right" x="+500.0" y="0.0" type="priority"/>
-   <node id="a_down" x="0.0" y="-500.0" type="priority"/>
-   <node id="a_up" x="0.0" y="+500.0" type="priority"/>
-   <node id="a_left_exit" x="-510.0" y="0.0" type="priority"/>
-   <node id="a_right_exit" x="+510.0" y="0.0" type="priority"/>
+   <node id="a" x="1020.0" y="0.0"  type="traffic_light_right_on_red"/>
+   <node id="a_left" x="520.0" y="0.0" type="priority"/>
+   <node id="a_right" x="1520.0" y="0.0" type="priority"/>
+   <node id="a_down" x="1020.0" y="-500.0" type="priority"/>
+   <node id="a_up" x="1020.0" y="500.0" type="priority"/>
+   <node id="a_right_exit" x="1530.0" y="0.0" type="priority"/>
+   <node id="a_up_exit" x="1020.0" y="510.0" type="priority"/>  
+   <node id="a_down_exit" x="1020.0" y="-510.0" type="priority"/>  
 
-   <node id="a_r" x="0.0" y="-510.0" type="priority"/>
+   <node id="a_j" x="510.0" y="0.0" type="priority"/>
+
+   <!--Jahangir chowk-->
+   <node id="j" x="0.0" y="0.0"  type="traffic_light_right_on_red"/>
+   <node id="j_left" x="-500.0" y="0.0" type="priority"/>
+   <node id="j_right" x="+500.0" y="0.0" type="priority"/>
+   <node id="j_down" x="0.0" y="-500.0" type="priority"/>
+   <node id="j_up" x="0.0" y="+500.0" type="priority"/>
+   <node id="j_left_exit" x="-510.0" y="0.0" type="priority"/>
+   <node id="j_up_exit" x="0.0" y="510.0" type="priority"/>
+
+   <node id="j_r" x="0.0" y="-510.0" type="priority"/>
 
    <!--RTO chwok-->
    <node id="r" x="0.0" y="-1020.0"  type="traffic_light_right_on_red"/>

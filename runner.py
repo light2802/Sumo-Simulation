@@ -81,20 +81,20 @@ def generate_routefile(date):
         <vType id="bus" accel="0.8" decel="4.5" sigma="0.5" length="6" minGap="3" maxSpeed="40" guiShape="bus"/>
         <vType id="truck" accel="0.8" decel="4.5" sigma="0.5" length="8" minGap="3" maxSpeed="40" guiShape="bus"/>
 
-        <route id="J_LEFT" edges="j_right_exit_j_right j_right_j j_j_left j_left_j_left_exit" />
-        <route id="J_RIGHT" edges="j_left_exit_j_left j_left_j j_j_right j_right_j_right_exit" />
-        <route id="J_DOWN" edges="j_up_exit_j_up j_up_j j_j_down j_down_j_a" />
-        <route id="J_UP" edges="j_a_j_down j_down_j j_j_up j_up_j_up_exit" />
+        <route id="J_LEFT" edges="a_j_j_right j_right_j j_j_left j_left_j_left_exit" />
+        <route id="J_RIGHT" edges="j_left_exit_j_left j_left_j j_j_right j_right_a_j" />
+        <route id="J_DOWN" edges="j_up_exit_j_up j_up_j j_j_down j_down_j_r" />
+        <route id="J_UP" edges="j_r_j_down j_down_j j_j_up j_up_j_up_exit" />
 
-        <route id="A_LEFT" edges="a_right_exit_a_right a_right_a a_a_left a_left_a_left_exit" />
-        <route id="A_RIGHT" edges="a_left_exit_a_left a_left_a a_a_right a_right_a_right_exit" />
-        <route id="A_DOWN" edges="j_a_a_up a_up_a a_a_down a_down_a_r" />
-        <route id="A_UP" edges="a_r_a_down a_down_a a_a_up a_up_j_a" />
+        <route id="A_LEFT" edges="a_right_exit_a_right a_right_a a_a_left a_left_a_j" />
+        <route id="A_RIGHT" edges="a_j_a_left a_left_a a_a_right a_right_a_right_exit" />
+        <route id="A_DOWN" edges="a_up_exit_a_up a_up_a a_a_down a_down_a_down_exit" />
+        <route id="A_UP" edges="a_down_exit_a_down a_down_a a_a_up a_up_a_up_exit" />
 
         <route id="R_LEFT" edges="r_right_exit_r_right r_right_r r_r_left r_left_r_left_exit" />
         <route id="R_RIGHT" edges="r_left_exit_r_left r_left_r r_r_right r_right_r_right_exit" />
-        <route id="R_DOWN" edges="a_r_r_up r_up_r r_r_down r_down_r_down_exit" />
-        <route id="R_UP" edges="r_down_exit_r_down r_down_r r_r_up r_up_a_r" />""", file=routes)
+        <route id="R_DOWN" edges="j_r_r_up r_up_r r_r_down r_down_r_down_exit" />
+        <route id="R_UP" edges="r_down_exit_r_down r_down_r r_r_up r_up_j_r" />""", file=routes)
 
         vehNr = 0
         for c in ["J", "A", "R"]:
@@ -116,7 +116,9 @@ def generate_routefile(date):
 #        <phase duration="6"  state="ryry"/>
 #    </tlLogic>
     print("Routes created\n")
-
+    os.system("python $SUMO_HOME/tools/route/sort_routes.py new/cross.rou.xml")
+    os.system("mv new/cross.rou.xml.sorted new/cross.rou.xml")
+    print("Routes sorte\n")
 
 def run():
     """execute the TraCI control loop"""
@@ -154,7 +156,8 @@ if __name__ == "__main__":
     date = options.date
     # first, generate the route file for this simulation
     generate_networkfile()
-    #generate_routefile(date)
+    generate_routefile(date)
+
     # this is the normal way of using traci. sumo is started as a
     # subprocess and then the python script connects and runs
     traci.start([sumoBinary, "--lanechange.duration", "0.1", "-c", "data/cross.sumocfg",
