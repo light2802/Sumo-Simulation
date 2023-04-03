@@ -155,8 +155,8 @@ if __name__ == "__main__":
 
     date = options.date
     # first, generate the route file for this simulation
-    generate_networkfile()
-    generate_routefile(int(date))
+    #generate_networkfile()
+    #generate_routefile(int(date))
 
     # this is the normal way of using traci. sumo is started as a
     # subprocess and then the python script connects and runs
