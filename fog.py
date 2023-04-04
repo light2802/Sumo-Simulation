@@ -18,6 +18,15 @@ def fog_control(host, port, jId, prob):
     state_right_down_green="rrrrrrrrrrrrrrrrrrrrrrrrrrrrGGGGrrrrrrrrrrrrrrrrrrrrrrrrrrrrGGGG"
     state_right_down_yellow="rrrrrrrrrrrrrrrrrrrrrrrrrrrryyyyrrrrrrrrrrrrrrrrrrrrrrrrrrrryyyy"
 
+    # Convert seconds to h:m:s format
+    def secToHMS(time):
+        h = int(time // 3600)
+        time = time % 3600
+        m = int(time // 60)
+        time = time % 60
+        s = time
+        return "{:02d}:{:02d}".format(h, m)
+
     #Get vehicle count for the jucntion with id jId
     def getJunctionCount(jId):
         simulationDelay(3)
@@ -74,8 +83,9 @@ def fog_control(host, port, jId, prob):
         #[date, hour]
         #traci.simulation.getTime()
 
-        curDate = datetime.datetime.now().strftime('%m-%d-%Y') 
-        curHour = datetime.datetime.now().strftime('%H:%M')
+        #TODO Fix date
+        curDate = '01-11-2023'#datetime.datetime.now().strftime('%m-%d-%Y') 
+        curHour = secToHMS(traci.simulation.getTime())
         curHour += ":00"
         value = [curDate, curHour]
         return value
@@ -94,6 +104,9 @@ def fog_control(host, port, jId, prob):
         for i in range(4):
             vehicles = data.loc[(data['Junction'] == IDS[i][0]) & (data['Direction'] == IDS[i][1]) &
                                 (data['Date'] == times[0]) & (data['Time'] == times[1])]
+            if vehicles.empty :
+                simulationDelay(1)
+                return pred
             predicted = vehicles.iloc[0]['predicted']
             pred.append(predicted)
         return pred
@@ -113,12 +126,20 @@ def fog_control(host, port, jId, prob):
         if probability and random.randint(1, 10000) % int(1 / probability) == 0:
             downtime = np.random.poisson(600)   #Random downtime with average downtime of 10s
             while downtime > 0:
-                print("Fog down for ", downtime, "s")
-                times = getFailureTime()
+                print("Fog down for ", downtime, "s", "at",
+                      secToHMS(traci.simulation.getTime()), "(", traci.simulation.getTime(), ")")
                 IDS = getFailureNode(jId)
-                predict = getPredictions(IDS, times)
+                predict = []
+                while True:
+                    times = getFailureTime()
+                    predict = getPredictions(IDS, times)
+                    if len(predict) < 4 :
+                        print("Couldn't predict at time ",
+                          secToHMS(traci.simulation.getTime()), "(",
+                        traci.simulation.getTime(), ")")
+                    else :
+                        break
                 updateSignalTimes(jId, vehicleCount = predict)
-                #call the other nodes that are not down
                 downtime -= 300
                 simulationDelay(300)
         else:
