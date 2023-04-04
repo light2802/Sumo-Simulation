@@ -68,14 +68,25 @@ def run(host, port):
             logic = traci.trafficlight.Logic("0", 0, 0, phases)
             traci.trafficlight.setProgramLogic(j, logic)
         return
-        
+    
+    def convert(seconds):
+        seconds = seconds % (24 * 3600)
+        hour = seconds // 3600
+        seconds %= 3600
+        minutes = seconds // 60
+        return "%d:%02d:00" % (hour, minutes)
+
     def getFailureTime():
         #[date, hour]
-        #traci.simulation.getTime()
 
-        curDate = datetime.datetime.now().strftime('%m-%d-%Y') 
-        curHour = datetime.datetime.now().strftime('%H:%M')
-        curHour += ":00"
+        #curDate = datetime.datetime.now().strftime('%m-%d-%Y') 
+        #curHour = datetime.datetime.now().strftime('%H:%M')
+        #curHour += ":00"
+
+        curDate = "11-01-2023" 
+        seconds = traci.simulation.getTime()
+        curHour = convert(seconds)
+
         value = [curDate, curHour]
         return value
     
