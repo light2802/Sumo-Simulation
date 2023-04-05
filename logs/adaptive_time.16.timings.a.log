@@ -27,10 +27,6 @@ Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refus
  Retrying in 1 seconds
 Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
  Retrying in 1 seconds
-Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
- Retrying in 1 seconds
-Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
- Retrying in 1 seconds
 Vehicles: [0, 1]
 Corresponsing times: [10, 30]
 Vehicles: [119, 216]

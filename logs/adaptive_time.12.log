@@ -32,10 +32,10 @@ Simulation version 1.15.0 started with time: 0.00.
 Simulation ended at time: 43632.00
 Reason: TraCI requested termination.
 Performance: 
- Duration: 69.35s
- TraCI-Duration: 3.94s
- Real time factor: 629.184
- UPS: 156504.737047
+ Duration: 67.41s
+ TraCI-Duration: 4.09s
+ Real time factor: 647.311
+ UPS: 161013.782360
 Vehicles: 
  Inserted: 66485
  Running: 0

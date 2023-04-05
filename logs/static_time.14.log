@@ -21,17 +21,17 @@ Routes sorte
 
  Retrying in 1 seconds
 ***Starting server on port 8813 ***
-Loading net-file from 'data/../new/cross.net.xml' ... done (20ms).
+Loading net-file from 'data/../new/cross.net.xml' ... done (21ms).
 Loading additional-files from 'data/cross.det.xml' ... done (2ms).
 Loading done.
 Simulation version 1.15.0 started with time: 0.00.
 Simulation ended at time: 43401.00
 Reason: TraCI requested termination.
 Performance: 
- Duration: 50.72s
- TraCI-Duration: 3.64s
- Real time factor: 855.681
- UPS: 175977.681828
+ Duration: 50.84s
+ TraCI-Duration: 3.61s
+ Real time factor: 853.695
+ UPS: 175569.228348
 Vehicles: 
  Inserted: 60423
  Running: 0
