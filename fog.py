@@ -146,6 +146,8 @@ def fog_control(host, port, jId, prob):
     		#traci.simulationStep()
             updateSignalTimes(jId)
             simulationDelay(300)
+    traci.close()
+    print("Simulation over")
 
 def get_options():
     optParser = optparse.OptionParser()
