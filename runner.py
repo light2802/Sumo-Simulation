@@ -42,26 +42,26 @@ def add_vehicles(inFileName, junction, outFileName, vehNr):
             truck_curr = int(truck_curr)
 
             while car_curr - car_count[direction] > 0:
-                print('    <vehicle id="%i" type="car" route="%s_%s" depart="%i" />' % (
-                    vehNr, junction, direction, time), file=outFileName)
+                print('    <vehicle id="%i" type="car" departLane="free" route="%s_%s" depart="%i" />' % (
+                    vehNr, junction, direction, time - int(500/60 + 60/(2*0.8))), file=outFileName)
                 vehNr += 1
                 car_count[direction] += 1
             while bike_curr - bike_count[direction] > 0:
-                print('    <vehicle id="%i" type="bike" route="%s_%s" depart="%i" />' % (
-                    vehNr, junction, direction, time), file=outFileName)
+                print('    <vehicle id="%i" type="bike" departLane="free" route="%s_%s" depart="%i" />' % (
+                    vehNr, junction, direction, time - int(500/80 + 80/(2*0.8))), file=outFileName)
                 vehNr += 1
                 bike_count[direction] += 1
             while bus_curr - bus_count[direction] > 0:
-                print('    <vehicle id="%i" type="bus" route="%s_%s" depart="%i" />' % (
-                    vehNr, junction, direction, time), file=outFileName)
+                print('    <vehicle id="%i" type="bus" departLane="free" route="%s_%s" depart="%i" />' % (
+                    vehNr, junction, direction, time - int(500/40 + 40/(2*0.8))), file=outFileName)
                 vehNr += 1
                 bus_count[direction] += 1
             while truck_curr - truck_count[direction] > 0:
-                 print('    <vehicle id="%i" type="truck" route="%s_%s" depart="%i" />' % (
-                     vehNr, junction, direction, time), file=outFileName)
+                 print('    <vehicle id="%i" type="truck" departLane="free" route="%s_%s" depart="%i" />' % (
+                     vehNr, junction, direction, time - int(500/40 + 40/(2*0.8))), file=outFileName)
                  vehNr += 1
                  truck_count[direction] += 1
-    print(truck_count)
+    #print(truck_count)
     print("Added %i vehicles from" % (vehNr), inFileName)
     return vehNr
 
