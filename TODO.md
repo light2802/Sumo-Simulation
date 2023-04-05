@@ -14,4 +14,4 @@
 	- [x]	Include density prediction model in above
 	- [x]	Split fog code to operate each junction TL from different program
 	- [ ]	Somehow show fog resilience using above
-    - [ ]   Make simulation run for week and use density prediction code   
+    - [x]   Make simulation run for week and use density prediction code   
