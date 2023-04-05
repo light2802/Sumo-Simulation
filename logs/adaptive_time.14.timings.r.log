@@ -1,0 +1,110 @@
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Vehicles: [0, 21]
+Corresponsing times: [10, 30]
+Vehicles: [118, 331]
+Corresponsing times: [30, 30]
+Vehicles: [319, 343]
+Corresponsing times: [30, 30]
+Vehicles: [213, 435]
+Corresponsing times: [30, 30]
+Vehicles: [252, 364]
+Corresponsing times: [30, 30]
+Vehicles: [200, 353]
+Corresponsing times: [30, 30]
+Vehicles: [185, 453]
+Corresponsing times: [30, 30]
+Vehicles: [255, 354]
+Corresponsing times: [30, 30]
+Vehicles: [219, 392]
+Corresponsing times: [30, 30]
+Vehicles: [207, 471]
+Corresponsing times: [30, 30]
+Vehicles: [234, 372]
+Corresponsing times: [30, 30]
+Vehicles: [228, 392]
+Corresponsing times: [30, 30]
+Vehicles: [162, 452]
+Corresponsing times: [30, 30]
+Vehicles: [230, 367]
+Corresponsing times: [30, 30]
+Vehicles: [162, 360]
+Corresponsing times: [30, 30]
+Vehicles: [196, 442]
+Corresponsing times: [30, 30]
+Vehicles: [183, 311]
+Corresponsing times: [30, 30]
+Vehicles: [152, 305]
+Corresponsing times: [30, 30]
+Vehicles: [182, 414]
+Corresponsing times: [30, 30]
+Vehicles: [222, 331]
+Corresponsing times: [30, 30]
+Vehicles: [217, 380]
+Corresponsing times: [30, 30]
+Vehicles: [187, 471]
+Corresponsing times: [30, 30]
+Vehicles: [175, 342]
+Corresponsing times: [30, 30]
+Vehicles: [163, 384]
+Corresponsing times: [30, 30]
+Vehicles: [132, 421]
+Corresponsing times: [28.643761301989148, 30]
+Vehicles: [194, 325]
+Corresponsing times: [30, 30]
+Vehicles: [184, 374]
+Corresponsing times: [30, 30]
+Vehicles: [118, 376]
+Corresponsing times: [28.663967611336034, 30]
+Vehicles: [188, 348]
+Corresponsing times: [30, 30]
+Vehicles: [170, 378]
+Corresponsing times: [30, 30]
+Vehicles: [138, 330]
+Corresponsing times: [30, 30]
+Vehicles: [172, 263]
+Corresponsing times: [30, 30]
+Vehicles: [118, 349]
+Corresponsing times: [30, 30]
+Vehicles: [149, 332]
+Corresponsing times: [30, 30]
+Vehicles: [237, 327]
+Corresponsing times: [30, 30]
+Vehicles: [110, 341]
+Corresponsing times: [29.268292682926827, 30]
+Vehicles: [182, 315]
+Corresponsing times: [30, 30]
+Simulation over

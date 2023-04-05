@@ -132,6 +132,8 @@ def run():
 
 def get_options():
     optParser = optparse.OptionParser()
+    optParser.add_option("--nocreateroute", action="store_true",
+                         default=False, help="Don't recreate routes")
     optParser.add_option("--nogui", action="store_true",
                          default=False, help="run the commandline version of sumo")
     optParser.add_option("--date", action="store", default=11,
@@ -156,7 +158,8 @@ if __name__ == "__main__":
     date = options.date
     # first, generate the route file for this simulation
     #generate_networkfile()
-    #generate_routefile(int(date))
+    if not options.nocreateroute:
+        generate_routefile(int(date))
 
     # this is the normal way of using traci. sumo is started as a
     # subprocess and then the python script connects and runs
