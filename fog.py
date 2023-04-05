@@ -9,14 +9,16 @@ def fog_control(host, port, jId, prob):
     traci.init(host = host, port = port)
     traci.setOrder(random.randint(0, 100))
 
-    state_up_down_green="GGGGGGGGGGGGrrrrrrrrrrrrrrrrrrrrGGGGGGGGGGGGrrrrrrrrrrrrrrrrrrrr"
-    state_up_down_yellow="yyyyyyyyyyyyrrrrrrrrrrrrrrrrrrrryyyyyyyyyyyyrrrrrrrrrrrrrrrrrrrr"
-    state_up_left_green="rrrrrrrrrrrrGGGGrrrrrrrrrrrrrrrrrrrrrrrrrrrrGGGGrrrrrrrrrrrrrrrr"
-    state_up_left_yellow="rrrrrrrrrrrryyyyrrrrrrrrrrrrrrrrrrrrrrrrrrrryyyyrrrrrrrrrrrrrrrr"
-    state_right_left_green="rrrrrrrrrrrrrrrrGGGGGGGGGGGGrrrrrrrrrrrrrrrrrrrrGGGGGGGGGGGGrrrr"
-    state_right_left_yellow="rrrrrrrrrrrrrrrryyyyyyyyyyyyrrrrrrrrrrrrrrrrrrrryyyyyyyyyyyyrrrr"
-    state_right_down_green="rrrrrrrrrrrrrrrrrrrrrrrrrrrrGGGGrrrrrrrrrrrrrrrrrrrrrrrrrrrrGGGG"
-    state_right_down_yellow="rrrrrrrrrrrrrrrrrrrrrrrrrrrryyyyrrrrrrrrrrrrrrrrrrrrrrrrrrrryyyy"
+    states = {
+            "GGGGGGGGGGGGrrrrrrrrrrrrrrrrrrrrGGGGGGGGGGGGrrrrrrrrrrrrrrrrrrrr" : 0,
+            "yyyyyyyyyyyyrrrrrrrrrrrrrrrrrrrryyyyyyyyyyyyrrrrrrrrrrrrrrrrrrrr" : 1,
+            "rrrrrrrrrrrrGGGGrrrrrrrrrrrrrrrrrrrrrrrrrrrrGGGGrrrrrrrrrrrrrrrr" : 2,
+            "rrrrrrrrrrrryyyyrrrrrrrrrrrrrrrrrrrrrrrrrrrryyyyrrrrrrrrrrrrrrrr" : 3,
+            "rrrrrrrrrrrrrrrrGGGGGGGGGGGGrrrrrrrrrrrrrrrrrrrrGGGGGGGGGGGGrrrr" : 4,
+            "rrrrrrrrrrrrrrrryyyyyyyyyyyyrrrrrrrrrrrrrrrrrrrryyyyyyyyyyyyrrrr" : 5,
+            "rrrrrrrrrrrrrrrrrrrrrrrrrrrrGGGGrrrrrrrrrrrrrrrrrrrrrrrrrrrrGGGG" : 6,
+            "rrrrrrrrrrrrrrrrrrrrrrrrrrrryyyyrrrrrrrrrrrrrrrrrrrrrrrrrrrryyyy" : 7,
+            }
 
     # Convert seconds to h:m:s format
     def secToHMS(time):
@@ -42,16 +44,8 @@ def fog_control(host, port, jId, prob):
 
     def updateSignalTimes(j, times = None, vehicleCount = None):
         if times:
-            phases = []
-            phases.append(traci.trafficlight.Phase(times[0], state_up_down_green, 0, 0))
-            phases.append(traci.trafficlight.Phase(times[1], state_up_down_yellow, 0, 0))
-            phases.append(traci.trafficlight.Phase(times[2], state_up_left_green, 0, 0))
-            phases.append(traci.trafficlight.Phase(times[3], state_up_left_yellow, 0, 0))
-            phases.append(traci.trafficlight.Phase(times[4], state_right_left_green, 0, 0))
-            phases.append(traci.trafficlight.Phase(times[5], state_right_left_yellow, 0, 0))
-            phases.append(traci.trafficlight.Phase(times[6], state_right_down_green, 0, 0))
-            phases.append(traci.trafficlight.Phase(times[7], state_right_down_yellow, 0, 0))
-            logic = traci.trafficlight.Logic("0", 0, 0, phases)
+            phases = [traci.trafficlight.Phase(times[states[state]], state, 0, 0) for state in states]
+            logic = traci.trafficlight.Logic("0", 0, states[traci.trafficlight.getRedYellowGreenState(j)], phases)
             traci.trafficlight.setProgramLogic(j, logic)
     #TODO predict contains 4 elements, add U/D R/L based on structure in SUMO to keep 2 values in vehicles
         if vehicleCount:
@@ -59,24 +53,17 @@ def fog_control(host, port, jId, prob):
         else:
             vehicles = getJunctionCount(j) 
         baseTimer = 120
-        timeLimits = [10, 50]
+        timeLimits = [10, 30]
         totalVehicles = sum(vehicles)
         
         if(totalVehicles != 0):
             t = [(i / totalVehicles) * baseTimer if timeLimits[0] < (i / totalVehicles) * baseTimer < timeLimits[1] else min(timeLimits, key=lambda x: abs(x - (i / totalVehicles) * baseTimer)) for i in vehicles]
             print("Vehicles:", vehicles)
             print("Corresponsing times:", t)
-            phases = []
-            phases.append(traci.trafficlight.Phase(t[0], state_up_down_green, 0, 0))
-            phases.append(traci.trafficlight.Phase(5, state_up_down_yellow, 0, 0))
-            phases.append(traci.trafficlight.Phase(5, state_up_left_green, 0, 0))
-            phases.append(traci.trafficlight.Phase(5, state_up_left_yellow, 0, 0))
-            phases.append(traci.trafficlight.Phase(t[1], state_right_left_green, 0, 0))
-            phases.append(traci.trafficlight.Phase(5, state_right_left_yellow, 0, 0))
-            phases.append(traci.trafficlight.Phase(5, state_right_down_green, 0, 0))
-            phases.append(traci.trafficlight.Phase(5, state_right_down_yellow, 0, 0))
-
-            logic = traci.trafficlight.Logic("0", 0, 0, phases)
+            phases = [traci.trafficlight.Phase(5, state, 0, 0) for state in states]
+            phases[0].duration = t[0]
+            phases[4].duration = t[1]
+            logic = traci.trafficlight.Logic("0", 0, states[traci.trafficlight.getRedYellowGreenState(j)], phases)
             traci.trafficlight.setProgramLogic(j, logic)
  
     def getFailureTime():
@@ -115,12 +102,12 @@ def fog_control(host, port, jId, prob):
     probability = prob
     data = pd.read_csv("./predictions/BTPROJ_predictions_knn.csv")
     #Start simulation
-    while traci.simulation.getMinExpectedNumber()>0:
+    while traci.simulation.getMinExpectedNumber() > 0:
         # Skip to when vehicles come
-        if skip :
-            updateSignalTimes(jId, times = [30,5,5,5,30,5,5,5])
-            traci.simulationStep(step=32368)
-            skip = 0
+        #if skip :
+        #    updateSignalTimes(jId, times = [30,5,5,5,30,5,5,5])
+        #    traci.simulationStep(step=32368)
+        #    skip = 0
 
         # Add prob. of downing a fog instead of a flag
         if probability and random.randint(1, 10000) % int(1 / probability) == 0:

@@ -2,7 +2,7 @@
 <nodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
 
    <!--Alankar chowk-->
-   <node id="a" x="1020.0" y="0.0"  type="traffic_light_right_on_red"/>
+   <node id="a" x="1020.0" y="0.0"  type="traffic_light"/>
    <node id="a_left" x="520.0" y="0.0" type="priority"/>
    <node id="a_right" x="1520.0" y="0.0" type="priority"/>
    <node id="a_down" x="1020.0" y="-500.0" type="priority"/>
@@ -14,7 +14,7 @@
    <node id="a_j" x="510.0" y="0.0" type="priority"/>
 
    <!--Jahangir chowk-->
-   <node id="j" x="0.0" y="0.0"  type="traffic_light_right_on_red"/>
+   <node id="j" x="0.0" y="0.0"  type="traffic_light"/>
    <node id="j_left" x="-500.0" y="0.0" type="priority"/>
    <node id="j_right" x="+500.0" y="0.0" type="priority"/>
    <node id="j_down" x="0.0" y="-500.0" type="priority"/>
@@ -25,7 +25,7 @@
    <node id="j_r" x="0.0" y="-510.0" type="priority"/>
 
    <!--RTO chwok-->
-   <node id="r" x="0.0" y="-1020.0"  type="traffic_light_right_on_red"/>
+   <node id="r" x="0.0" y="-1020.0"  type="traffic_light"/>
    <node id="r_left" x="-500.0" y="-1020.0" type="priority"/>
    <node id="r_right" x="+500.0" y="-1020.0" type="priority"/>
    <node id="r_down" x="0.0" y="-1520.0" type="priority"/>
