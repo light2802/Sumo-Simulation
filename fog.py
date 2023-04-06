@@ -7,7 +7,7 @@ import random
 
 def fog_control(host, port, jId, prob):
     traci.init(host = host, port = port)
-    traci.setOrder(random.randint(0, 100))
+    traci.setOrder(random.randint(2, 100))
 
     states = {
             "GGGGGGGGGGGGrrrrrrrrrrrrrrrrrrrrGGGGGGGGGGGGrrrrrrrrrrrrrrrrrrrr" : 0,
@@ -92,7 +92,7 @@ def fog_control(host, port, jId, prob):
             vehicles = data.loc[(data['Junction'] == IDS[i][0]) & (data['Direction'] == IDS[i][1]) &
                                 (data['Date'] == times[0]) & (data['Time'] == times[1])]
             if vehicles.empty :
-                simulationDelay(1)
+                simulationDelay(60)
                 return pred
             predicted = vehicles.iloc[0]['predicted']
             pred.append(predicted)
@@ -117,7 +117,7 @@ def fog_control(host, port, jId, prob):
                       secToHMS(traci.simulation.getTime()), "(", traci.simulation.getTime(), ")")
                 IDS = getFailureNode(jId)
                 predict = []
-                while True:
+                while traci.simulation.getMinExpectedNumber() > 0:
                     times = getFailureTime()
                     predict = getPredictions(IDS, times)
                     if len(predict) < 4 :
@@ -126,9 +126,12 @@ def fog_control(host, port, jId, prob):
                         traci.simulation.getTime(), ")")
                     else :
                         break
-                updateSignalTimes(jId, vehicleCount = predict)
-                downtime -= 300
-                simulationDelay(300)
+                if len(predict) == 4:
+                    updateSignalTimes(jId, vehicleCount = predict)
+                    downtime -= 300
+                    simulationDelay(300)
+                else:
+                    break
         else:
     		#traci.simulationStep()
             updateSignalTimes(jId)
