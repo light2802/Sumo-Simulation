@@ -47,7 +47,6 @@ def fog_control(host, port, jId, prob):
             phases = [traci.trafficlight.Phase(times[states[state]], state, 0, 0) for state in states]
             logic = traci.trafficlight.Logic("0", 0, states[traci.trafficlight.getRedYellowGreenState(j)], phases)
             traci.trafficlight.setProgramLogic(j, logic)
-    #TODO predict contains 4 elements, add U/D R/L based on structure in SUMO to keep 2 values in vehicles
         if vehicleCount:
             vehicles = vehicleCount
         else:
@@ -80,11 +79,14 @@ def fog_control(host, port, jId, prob):
     def getFailureNode(ID):
         if ID == "j":
             #[(id, dir), (id, dir), ...]
-            return [(4,4), (3,1), (2,2), (3,2)]
+            #U D R L
+            return [(4,4), (2,2), (3,2), (3,1)]
         elif ID == "a":
-            return [(1,4), (0,2), (1,3), (0,1)]
+            #return [(1,4), (0,2), (1,3), (0,1)]
+            return [(1,4), (1,3), (0,1), (0,2)]
         else:
-            return [(7,4), (6,1), (5,2), (6,4)]
+            #return [(7,4), (6,1), (5,2), (6,4)]
+            return [(7,4), (5,2), (6,4), (6,1)]
     
     def getPredictions(IDS, times):
         pred = []
@@ -96,7 +98,8 @@ def fog_control(host, port, jId, prob):
                 return pred
             predicted = vehicles.iloc[0]['predicted']
             pred.append(predicted)
-        return pred
+        final = [(pred[0] + pred[1]), (pred[2] + pred[3])]
+        return final
 
     skip = 1
     probability = prob
@@ -120,13 +123,13 @@ def fog_control(host, port, jId, prob):
                 while traci.simulation.getMinExpectedNumber() > 0:
                     times = getFailureTime()
                     predict = getPredictions(IDS, times)
-                    if len(predict) < 4 :
+                    if len(predict) < 2 :
                         print("Couldn't predict at time ",
                           secToHMS(traci.simulation.getTime()), "(",
                         traci.simulation.getTime(), ")")
                     else :
                         break
-                if len(predict) == 4:
+                if len(predict) == 2:
                     updateSignalTimes(jId, vehicleCount = predict)
                     downtime -= 300
                     simulationDelay(300)
