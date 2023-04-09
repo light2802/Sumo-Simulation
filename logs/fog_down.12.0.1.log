@@ -25,7 +25,26 @@ Routes sorte
   client connected
   client connected
   client connected
-Loading net-file from 'data/../new/cross.net.xml' ... done (21ms).
-Loading additional-files from 'data/cross.det.xml' ... done (4ms).
+Loading net-file from 'data/../new/cross.net.xml' ... done (55ms).
+Loading additional-files from 'data/cross.det.xml' ... done (2ms).
 Loading done.
 Simulation version 1.15.0 started with time: 0.00.
+Simulation ended at time: 43680.00
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 81.11s
+ TraCI-Duration: 11.08s
+ Real time factor: 538.521
+ UPS: 135101.922057
+Vehicles: 
+ Inserted: 66485
+ Running: 0
+ Waiting: 0
+Statistics (avg of 66485):
+ RouteLength: 1018.17
+ Speed: 7.10
+ Duration: 164.82
+ WaitingTime: 46.09
+ TimeLoss: 91.87
+ DepartDelay: 9.71
+
