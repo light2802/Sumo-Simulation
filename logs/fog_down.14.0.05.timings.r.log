@@ -1,0 +1,393 @@
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Fog down for  563 s at 04:17 ( 15453.0 )
+Couldn't predict at time  04:18 ( 15513.0 )
+Couldn't predict at time  04:19 ( 15573.0 )
+Couldn't predict at time  04:20 ( 15633.0 )
+Couldn't predict at time  04:21 ( 15693.0 )
+Couldn't predict at time  04:22 ( 15753.0 )
+Couldn't predict at time  04:23 ( 15813.0 )
+Couldn't predict at time  04:24 ( 15873.0 )
+Couldn't predict at time  04:25 ( 15933.0 )
+Couldn't predict at time  04:26 ( 15993.0 )
+Couldn't predict at time  04:27 ( 16053.0 )
+Couldn't predict at time  04:28 ( 16113.0 )
+Couldn't predict at time  04:29 ( 16173.0 )
+Couldn't predict at time  04:30 ( 16233.0 )
+Couldn't predict at time  04:31 ( 16293.0 )
+Couldn't predict at time  04:32 ( 16353.0 )
+Couldn't predict at time  04:33 ( 16413.0 )
+Couldn't predict at time  04:34 ( 16473.0 )
+Couldn't predict at time  04:35 ( 16533.0 )
+Couldn't predict at time  04:36 ( 16593.0 )
+Couldn't predict at time  04:37 ( 16653.0 )
+Couldn't predict at time  04:38 ( 16713.0 )
+Couldn't predict at time  04:39 ( 16773.0 )
+Couldn't predict at time  04:40 ( 16833.0 )
+Couldn't predict at time  04:41 ( 16893.0 )
+Couldn't predict at time  04:42 ( 16953.0 )
+Couldn't predict at time  04:43 ( 17013.0 )
+Couldn't predict at time  04:44 ( 17073.0 )
+Couldn't predict at time  04:45 ( 17133.0 )
+Couldn't predict at time  04:46 ( 17193.0 )
+Couldn't predict at time  04:47 ( 17253.0 )
+Couldn't predict at time  04:48 ( 17313.0 )
+Couldn't predict at time  04:49 ( 17373.0 )
+Couldn't predict at time  04:50 ( 17433.0 )
+Couldn't predict at time  04:51 ( 17493.0 )
+Couldn't predict at time  04:52 ( 17553.0 )
+Couldn't predict at time  04:53 ( 17613.0 )
+Couldn't predict at time  04:54 ( 17673.0 )
+Couldn't predict at time  04:55 ( 17733.0 )
+Couldn't predict at time  04:56 ( 17793.0 )
+Couldn't predict at time  04:57 ( 17853.0 )
+Couldn't predict at time  04:58 ( 17913.0 )
+Couldn't predict at time  04:59 ( 17973.0 )
+Couldn't predict at time  05:00 ( 18033.0 )
+Couldn't predict at time  05:01 ( 18093.0 )
+Couldn't predict at time  05:02 ( 18153.0 )
+Couldn't predict at time  05:03 ( 18213.0 )
+Couldn't predict at time  05:04 ( 18273.0 )
+Couldn't predict at time  05:05 ( 18333.0 )
+Couldn't predict at time  05:06 ( 18393.0 )
+Couldn't predict at time  05:07 ( 18453.0 )
+Couldn't predict at time  05:08 ( 18513.0 )
+Couldn't predict at time  05:09 ( 18573.0 )
+Couldn't predict at time  05:10 ( 18633.0 )
+Couldn't predict at time  05:11 ( 18693.0 )
+Couldn't predict at time  05:12 ( 18753.0 )
+Couldn't predict at time  05:13 ( 18813.0 )
+Couldn't predict at time  05:14 ( 18873.0 )
+Couldn't predict at time  05:15 ( 18933.0 )
+Couldn't predict at time  05:16 ( 18993.0 )
+Couldn't predict at time  05:17 ( 19053.0 )
+Couldn't predict at time  05:18 ( 19113.0 )
+Couldn't predict at time  05:19 ( 19173.0 )
+Couldn't predict at time  05:20 ( 19233.0 )
+Couldn't predict at time  05:21 ( 19293.0 )
+Couldn't predict at time  05:22 ( 19353.0 )
+Couldn't predict at time  05:23 ( 19413.0 )
+Couldn't predict at time  05:24 ( 19473.0 )
+Couldn't predict at time  05:25 ( 19533.0 )
+Couldn't predict at time  05:26 ( 19593.0 )
+Couldn't predict at time  05:27 ( 19653.0 )
+Couldn't predict at time  05:28 ( 19713.0 )
+Couldn't predict at time  05:29 ( 19773.0 )
+Couldn't predict at time  05:30 ( 19833.0 )
+Couldn't predict at time  05:31 ( 19893.0 )
+Couldn't predict at time  05:32 ( 19953.0 )
+Couldn't predict at time  05:33 ( 20013.0 )
+Couldn't predict at time  05:34 ( 20073.0 )
+Couldn't predict at time  05:35 ( 20133.0 )
+Couldn't predict at time  05:36 ( 20193.0 )
+Couldn't predict at time  05:37 ( 20253.0 )
+Couldn't predict at time  05:38 ( 20313.0 )
+Couldn't predict at time  05:39 ( 20373.0 )
+Couldn't predict at time  05:40 ( 20433.0 )
+Couldn't predict at time  05:41 ( 20493.0 )
+Couldn't predict at time  05:42 ( 20553.0 )
+Couldn't predict at time  05:43 ( 20613.0 )
+Couldn't predict at time  05:44 ( 20673.0 )
+Couldn't predict at time  05:45 ( 20733.0 )
+Couldn't predict at time  05:46 ( 20793.0 )
+Couldn't predict at time  05:47 ( 20853.0 )
+Couldn't predict at time  05:48 ( 20913.0 )
+Couldn't predict at time  05:49 ( 20973.0 )
+Couldn't predict at time  05:50 ( 21033.0 )
+Couldn't predict at time  05:51 ( 21093.0 )
+Couldn't predict at time  05:52 ( 21153.0 )
+Couldn't predict at time  05:53 ( 21213.0 )
+Couldn't predict at time  05:54 ( 21273.0 )
+Couldn't predict at time  05:55 ( 21333.0 )
+Couldn't predict at time  05:56 ( 21393.0 )
+Couldn't predict at time  05:57 ( 21453.0 )
+Couldn't predict at time  05:58 ( 21513.0 )
+Couldn't predict at time  05:59 ( 21573.0 )
+Couldn't predict at time  06:00 ( 21633.0 )
+Couldn't predict at time  06:01 ( 21693.0 )
+Couldn't predict at time  06:02 ( 21753.0 )
+Couldn't predict at time  06:03 ( 21813.0 )
+Couldn't predict at time  06:04 ( 21873.0 )
+Couldn't predict at time  06:05 ( 21933.0 )
+Couldn't predict at time  06:06 ( 21993.0 )
+Couldn't predict at time  06:07 ( 22053.0 )
+Couldn't predict at time  06:08 ( 22113.0 )
+Couldn't predict at time  06:09 ( 22173.0 )
+Couldn't predict at time  06:10 ( 22233.0 )
+Couldn't predict at time  06:11 ( 22293.0 )
+Couldn't predict at time  06:12 ( 22353.0 )
+Couldn't predict at time  06:13 ( 22413.0 )
+Couldn't predict at time  06:14 ( 22473.0 )
+Couldn't predict at time  06:15 ( 22533.0 )
+Couldn't predict at time  06:16 ( 22593.0 )
+Couldn't predict at time  06:17 ( 22653.0 )
+Couldn't predict at time  06:18 ( 22713.0 )
+Couldn't predict at time  06:19 ( 22773.0 )
+Couldn't predict at time  06:20 ( 22833.0 )
+Couldn't predict at time  06:21 ( 22893.0 )
+Couldn't predict at time  06:22 ( 22953.0 )
+Couldn't predict at time  06:23 ( 23013.0 )
+Couldn't predict at time  06:24 ( 23073.0 )
+Couldn't predict at time  06:25 ( 23133.0 )
+Couldn't predict at time  06:26 ( 23193.0 )
+Couldn't predict at time  06:27 ( 23253.0 )
+Couldn't predict at time  06:28 ( 23313.0 )
+Couldn't predict at time  06:29 ( 23373.0 )
+Couldn't predict at time  06:30 ( 23433.0 )
+Couldn't predict at time  06:31 ( 23493.0 )
+Couldn't predict at time  06:32 ( 23553.0 )
+Couldn't predict at time  06:33 ( 23613.0 )
+Couldn't predict at time  06:34 ( 23673.0 )
+Couldn't predict at time  06:35 ( 23733.0 )
+Couldn't predict at time  06:36 ( 23793.0 )
+Couldn't predict at time  06:37 ( 23853.0 )
+Couldn't predict at time  06:38 ( 23913.0 )
+Couldn't predict at time  06:39 ( 23973.0 )
+Couldn't predict at time  06:40 ( 24033.0 )
+Couldn't predict at time  06:41 ( 24093.0 )
+Couldn't predict at time  06:42 ( 24153.0 )
+Couldn't predict at time  06:43 ( 24213.0 )
+Couldn't predict at time  06:44 ( 24273.0 )
+Couldn't predict at time  06:45 ( 24333.0 )
+Couldn't predict at time  06:46 ( 24393.0 )
+Couldn't predict at time  06:47 ( 24453.0 )
+Couldn't predict at time  06:48 ( 24513.0 )
+Couldn't predict at time  06:49 ( 24573.0 )
+Couldn't predict at time  06:50 ( 24633.0 )
+Couldn't predict at time  06:51 ( 24693.0 )
+Couldn't predict at time  06:52 ( 24753.0 )
+Couldn't predict at time  06:53 ( 24813.0 )
+Couldn't predict at time  06:54 ( 24873.0 )
+Couldn't predict at time  06:55 ( 24933.0 )
+Couldn't predict at time  06:56 ( 24993.0 )
+Couldn't predict at time  06:57 ( 25053.0 )
+Couldn't predict at time  06:58 ( 25113.0 )
+Couldn't predict at time  06:59 ( 25173.0 )
+Couldn't predict at time  07:00 ( 25233.0 )
+Couldn't predict at time  07:01 ( 25293.0 )
+Couldn't predict at time  07:02 ( 25353.0 )
+Couldn't predict at time  07:03 ( 25413.0 )
+Couldn't predict at time  07:04 ( 25473.0 )
+Couldn't predict at time  07:05 ( 25533.0 )
+Couldn't predict at time  07:06 ( 25593.0 )
+Couldn't predict at time  07:07 ( 25653.0 )
+Couldn't predict at time  07:08 ( 25713.0 )
+Couldn't predict at time  07:09 ( 25773.0 )
+Couldn't predict at time  07:10 ( 25833.0 )
+Couldn't predict at time  07:11 ( 25893.0 )
+Couldn't predict at time  07:12 ( 25953.0 )
+Couldn't predict at time  07:13 ( 26013.0 )
+Couldn't predict at time  07:14 ( 26073.0 )
+Couldn't predict at time  07:15 ( 26133.0 )
+Couldn't predict at time  07:16 ( 26193.0 )
+Couldn't predict at time  07:17 ( 26253.0 )
+Couldn't predict at time  07:18 ( 26313.0 )
+Couldn't predict at time  07:19 ( 26373.0 )
+Couldn't predict at time  07:20 ( 26433.0 )
+Couldn't predict at time  07:21 ( 26493.0 )
+Couldn't predict at time  07:22 ( 26553.0 )
+Couldn't predict at time  07:23 ( 26613.0 )
+Couldn't predict at time  07:24 ( 26673.0 )
+Couldn't predict at time  07:25 ( 26733.0 )
+Couldn't predict at time  07:26 ( 26793.0 )
+Couldn't predict at time  07:27 ( 26853.0 )
+Couldn't predict at time  07:28 ( 26913.0 )
+Couldn't predict at time  07:29 ( 26973.0 )
+Couldn't predict at time  07:30 ( 27033.0 )
+Couldn't predict at time  07:31 ( 27093.0 )
+Couldn't predict at time  07:32 ( 27153.0 )
+Couldn't predict at time  07:33 ( 27213.0 )
+Couldn't predict at time  07:34 ( 27273.0 )
+Couldn't predict at time  07:35 ( 27333.0 )
+Couldn't predict at time  07:36 ( 27393.0 )
+Couldn't predict at time  07:37 ( 27453.0 )
+Couldn't predict at time  07:38 ( 27513.0 )
+Couldn't predict at time  07:39 ( 27573.0 )
+Couldn't predict at time  07:40 ( 27633.0 )
+Couldn't predict at time  07:41 ( 27693.0 )
+Couldn't predict at time  07:42 ( 27753.0 )
+Couldn't predict at time  07:43 ( 27813.0 )
+Couldn't predict at time  07:44 ( 27873.0 )
+Couldn't predict at time  07:45 ( 27933.0 )
+Couldn't predict at time  07:46 ( 27993.0 )
+Couldn't predict at time  07:47 ( 28053.0 )
+Couldn't predict at time  07:48 ( 28113.0 )
+Couldn't predict at time  07:49 ( 28173.0 )
+Couldn't predict at time  07:50 ( 28233.0 )
+Couldn't predict at time  07:51 ( 28293.0 )
+Couldn't predict at time  07:52 ( 28353.0 )
+Couldn't predict at time  07:53 ( 28413.0 )
+Couldn't predict at time  07:54 ( 28473.0 )
+Couldn't predict at time  07:55 ( 28533.0 )
+Couldn't predict at time  07:56 ( 28593.0 )
+Couldn't predict at time  07:57 ( 28653.0 )
+Couldn't predict at time  07:58 ( 28713.0 )
+Couldn't predict at time  07:59 ( 28773.0 )
+Couldn't predict at time  08:00 ( 28833.0 )
+Couldn't predict at time  08:01 ( 28893.0 )
+Couldn't predict at time  08:02 ( 28953.0 )
+Couldn't predict at time  08:03 ( 29013.0 )
+Couldn't predict at time  08:04 ( 29073.0 )
+Couldn't predict at time  08:05 ( 29133.0 )
+Couldn't predict at time  08:06 ( 29193.0 )
+Couldn't predict at time  08:07 ( 29253.0 )
+Couldn't predict at time  08:08 ( 29313.0 )
+Couldn't predict at time  08:09 ( 29373.0 )
+Couldn't predict at time  08:10 ( 29433.0 )
+Couldn't predict at time  08:11 ( 29493.0 )
+Couldn't predict at time  08:12 ( 29553.0 )
+Couldn't predict at time  08:13 ( 29613.0 )
+Couldn't predict at time  08:14 ( 29673.0 )
+Couldn't predict at time  08:15 ( 29733.0 )
+Couldn't predict at time  08:16 ( 29793.0 )
+Couldn't predict at time  08:17 ( 29853.0 )
+Couldn't predict at time  08:18 ( 29913.0 )
+Couldn't predict at time  08:19 ( 29973.0 )
+Couldn't predict at time  08:20 ( 30033.0 )
+Couldn't predict at time  08:21 ( 30093.0 )
+Couldn't predict at time  08:22 ( 30153.0 )
+Couldn't predict at time  08:23 ( 30213.0 )
+Couldn't predict at time  08:24 ( 30273.0 )
+Couldn't predict at time  08:25 ( 30333.0 )
+Couldn't predict at time  08:26 ( 30393.0 )
+Couldn't predict at time  08:27 ( 30453.0 )
+Couldn't predict at time  08:28 ( 30513.0 )
+Couldn't predict at time  08:29 ( 30573.0 )
+Couldn't predict at time  08:30 ( 30633.0 )
+Couldn't predict at time  08:31 ( 30693.0 )
+Couldn't predict at time  08:32 ( 30753.0 )
+Couldn't predict at time  08:33 ( 30813.0 )
+Couldn't predict at time  08:34 ( 30873.0 )
+Couldn't predict at time  08:35 ( 30933.0 )
+Couldn't predict at time  08:36 ( 30993.0 )
+Couldn't predict at time  08:37 ( 31053.0 )
+Couldn't predict at time  08:38 ( 31113.0 )
+Couldn't predict at time  08:39 ( 31173.0 )
+Couldn't predict at time  08:40 ( 31233.0 )
+Couldn't predict at time  08:41 ( 31293.0 )
+Couldn't predict at time  08:42 ( 31353.0 )
+Couldn't predict at time  08:43 ( 31413.0 )
+Couldn't predict at time  08:44 ( 31473.0 )
+Couldn't predict at time  08:45 ( 31533.0 )
+Couldn't predict at time  08:46 ( 31593.0 )
+Couldn't predict at time  08:47 ( 31653.0 )
+Couldn't predict at time  08:48 ( 31713.0 )
+Couldn't predict at time  08:49 ( 31773.0 )
+Couldn't predict at time  08:50 ( 31833.0 )
+Couldn't predict at time  08:51 ( 31893.0 )
+Couldn't predict at time  08:52 ( 31953.0 )
+Couldn't predict at time  08:53 ( 32013.0 )
+Couldn't predict at time  08:54 ( 32073.0 )
+Couldn't predict at time  08:55 ( 32133.0 )
+Couldn't predict at time  08:56 ( 32193.0 )
+Couldn't predict at time  08:57 ( 32253.0 )
+Couldn't predict at time  08:58 ( 32313.0 )
+Couldn't predict at time  08:59 ( 32373.0 )
+Couldn't predict at time  09:00 ( 32433.0 )
+Couldn't predict at time  09:01 ( 32493.0 )
+Vehicles: [22.0, 20.0]
+Corresponsing times: [30, 30]
+Fog down for  263 s at 09:06 ( 32793.0 )
+Vehicles: [11.0, 14.0]
+Corresponsing times: [30, 30]
+Vehicles: [249, 405]
+Corresponsing times: [30, 30]
+Vehicles: [177, 396]
+Corresponsing times: [30, 30]
+Vehicles: [263, 358]
+Corresponsing times: [30, 30]
+Vehicles: [178, 404]
+Corresponsing times: [30, 30]
+Vehicles: [195, 408]
+Corresponsing times: [30, 30]
+Vehicles: [257, 359]
+Corresponsing times: [30, 30]
+Vehicles: [214, 426]
+Corresponsing times: [30, 30]
+Vehicles: [204, 437]
+Corresponsing times: [30, 30]
+Vehicles: [254, 373]
+Corresponsing times: [30, 30]
+Vehicles: [208, 428]
+Corresponsing times: [30, 30]
+Vehicles: [157, 419]
+Corresponsing times: [30, 30]
+Vehicles: [244, 368]
+Corresponsing times: [30, 30]
+Vehicles: [152, 391]
+Corresponsing times: [30, 30]
+Vehicles: [201, 405]
+Corresponsing times: [30, 30]
+Vehicles: [189, 310]
+Corresponsing times: [30, 30]
+Vehicles: [143, 346]
+Corresponsing times: [30, 30]
+Vehicles: [186, 356]
+Corresponsing times: [30, 30]
+Vehicles: [237, 349]
+Corresponsing times: [30, 30]
+Vehicles: [180, 422]
+Corresponsing times: [30, 30]
+Vehicles: [206, 426]
+Corresponsing times: [30, 30]
+Fog down for  633 s at 10:52 ( 39153.0 )
+Vehicles: [43.0, 34.0]
+Corresponsing times: [30, 30]
+Fog down for  333 s at 10:57 ( 39453.0 )
+Vehicles: [12.0, 9.0]
+Corresponsing times: [30, 30]
+Fog down for  33 s at 11:02 ( 39753.0 )
+Vehicles: [42.0, 20.0]
+Corresponsing times: [30, 30]
+Vehicles: [197, 332]
+Corresponsing times: [30, 30]
+Vehicles: [184, 397]
+Corresponsing times: [30, 30]
+Vehicles: [120, 356]
+Corresponsing times: [30, 30]
+Vehicles: [185, 342]
+Corresponsing times: [30, 30]
+Vehicles: [166, 381]
+Corresponsing times: [30, 30]
+Vehicles: [142, 333]
+Corresponsing times: [30, 30]
+Vehicles: [173, 263]
+Corresponsing times: [30, 30]
+Vehicles: [125, 344]
+Corresponsing times: [30, 30]
+Vehicles: [145, 339]
+Corresponsing times: [30, 30]
+Vehicles: [236, 331]
+Corresponsing times: [30, 30]
+Vehicles: [119, 334]
+Corresponsing times: [30, 30]
+Vehicles: [173, 318]
+Corresponsing times: [30, 30]
+Simulation over

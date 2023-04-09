@@ -1,0 +1,51 @@
+Added 1728 vehicles from proj/J/j1/j1_15_one.csv
+Added 9575 vehicles from proj/J/j1/j1_15.csv
+Added 10535 vehicles from proj/J/j2/j2_15_one.csv
+Added 15230 vehicles from proj/J/j2/j2_15.csv
+Added 16415 vehicles from proj/J/j3/j3_15_one.csv
+Added 21938 vehicles from proj/J/j3/j3_15.csv
+Added 22474 vehicles from proj/A/a2/a2_15_one.csv
+Added 24816 vehicles from proj/A/a2/a2_15.csv
+Added 30034 vehicles from proj/A/a3/a3_15_one.csv
+Added 50921 vehicles from proj/A/a3/a3_15.csv
+Added 51821 vehicles from proj/R/r1/r1_15_one.csv
+Added 56103 vehicles from proj/R/r1/r1_15.csv
+Added 57789 vehicles from proj/R/r2/r2_15_one.csv
+Added 65682 vehicles from proj/R/r2/r2_15.csv
+Added 70676 vehicles from proj/R/r3/r3_15.csv
+Routes created
+
+read 70676 elements.
+wrote 70676 elements.
+Routes sorte
+
+ Retrying in 1 seconds
+***Starting server on port 8813 ***
+  waiting for 4 clients...
+  client connected
+  client connected
+  client connected
+  client connected
+Loading net-file from 'data/../new/cross.net.xml' ... done (33ms).
+Loading additional-files from 'data/cross.det.xml' ... done (2ms).
+Loading done.
+Simulation version 1.15.0 started with time: 0.00.
+Simulation ended at time: 46080.00
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 164.32s
+ TraCI-Duration: 14.13s
+ Real time factor: 280.437
+ UPS: 130729.056994
+Vehicles: 
+ Inserted: 70676
+ Running: 0
+ Waiting: 0
+Statistics (avg of 70676):
+ RouteLength: 1017.97
+ Speed: 5.98
+ Duration: 303.93
+ WaitingTime: 139.00
+ TimeLoss: 230.97
+ DepartDelay: 56.46
+
