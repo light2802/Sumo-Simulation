@@ -27,7 +27,7 @@ Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refus
  Retrying in 1 seconds
 Could not connect to TraCI server at localhost:8813 [Errno 111] Connection refused
  Retrying in 1 seconds
-Fog down for  602 s at 00:30 ( 1818.0 )
+Fog down for  583 s at 00:30 ( 1818.0 )
 Couldn't predict at time  00:31 ( 1878.0 )
 Couldn't predict at time  00:32 ( 1938.0 )
 Couldn't predict at time  00:33 ( 1998.0 )
@@ -538,102 +538,84 @@ Couldn't predict at time  08:57 ( 32238.0 )
 Couldn't predict at time  08:58 ( 32298.0 )
 Couldn't predict at time  08:59 ( 32358.0 )
 Couldn't predict at time  09:00 ( 32418.0 )
-Couldn't predict at time  09:01 ( 32478.0 )
-Vehicles: [9.0, 0.0]
-Corresponsing times: [30, 10]
-Fog down for  302 s at 09:06 ( 32778.0 )
-Vehicles: [25.0, 2.0]
-Corresponsing times: [30, 10]
-Fog down for  2 s at 09:11 ( 33078.0 )
-Vehicles: [25.0, 0.0]
-Corresponsing times: [30, 10]
-Vehicles: [218, 172]
+Vehicles: [9.0, 3.0]
 Corresponsing times: [30, 30]
-Fog down for  554 s at 09:21 ( 33681.0 )
-Vehicles: [28.0, 3.0]
-Corresponsing times: [30, 11.612903225806452]
-Fog down for  254 s at 09:26 ( 33981.0 )
-Vehicles: [21.0, 2.0]
-Corresponsing times: [30, 10.434782608695652]
-Vehicles: [741, 177]
-Corresponsing times: [30, 23.137254901960784]
-Vehicles: [450, 248]
+Fog down for  283 s at 09:05 ( 32718.0 )
+Vehicles: [32.0, 43.0]
 Corresponsing times: [30, 30]
-Fog down for  629 s at 09:41 ( 34887.0 )
-Vehicles: [35.0, 2.0]
-Corresponsing times: [30, 10]
-Fog down for  329 s at 09:46 ( 35187.0 )
-Vehicles: [42.0, 3.0]
-Corresponsing times: [30, 10]
-Fog down for  29 s at 09:51 ( 35487.0 )
-Vehicles: [22.0, 4.0]
-Corresponsing times: [30, 18.461538461538463]
-Vehicles: [57, 326]
-Corresponsing times: [17.859007832898172, 30]
-Fog down for  634 s at 10:01 ( 36090.0 )
-Vehicles: [23.0, 1.0]
-Corresponsing times: [30, 10]
-Fog down for  334 s at 10:06 ( 36390.0 )
-Vehicles: [26.0, 7.0]
-Corresponsing times: [30, 25.454545454545457]
-Fog down for  34 s at 10:11 ( 36690.0 )
-Vehicles: [25.0, 2.0]
-Corresponsing times: [30, 10]
-Fog down for  622 s at 10:16 ( 36990.0 )
-Vehicles: [39.0, 4.0]
-Corresponsing times: [30, 11.162790697674419]
-Fog down for  322 s at 10:21 ( 37290.0 )
-Vehicles: [12.0, 8.0]
+Vehicles: [323, 266]
 Corresponsing times: [30, 30]
-Fog down for  22 s at 10:26 ( 37590.0 )
-Vehicles: [24.0, 7.0]
-Corresponsing times: [30, 27.096774193548388]
-Vehicles: [465, 236]
+Vehicles: [214, 197]
 Corresponsing times: [30, 30]
-Vehicles: [419, 147]
+Vehicles: [313, 188]
 Corresponsing times: [30, 30]
-Fog down for  579 s at 10:41 ( 38496.0 )
-Vehicles: [25.0, 4.0]
-Corresponsing times: [30, 16.551724137931036]
-Fog down for  279 s at 10:46 ( 38796.0 )
-Vehicles: [22.0, 3.0]
-Corresponsing times: [30, 14.399999999999999]
-Vehicles: [571, 174]
-Corresponsing times: [30, 28.026845637583893]
-Vehicles: [458, 183]
+Vehicles: [265, 242]
 Corresponsing times: [30, 30]
-Fog down for  552 s at 11:01 ( 39702.0 )
-Vehicles: [37.0, 5.0]
-Corresponsing times: [30, 14.285714285714285]
-Fog down for  252 s at 11:06 ( 40002.0 )
-Vehicles: [29.0, 6.0]
-Corresponsing times: [30, 20.571428571428573]
-Vehicles: [454, 184]
+Vehicles: [541, 253]
 Corresponsing times: [30, 30]
-Vehicles: [439, 162]
+Fog down for  616 s at 09:35 ( 34533.0 )
+Vehicles: [286.0, 56.0]
+Corresponsing times: [30, 19.64912280701754]
+Fog down for  316 s at 09:40 ( 34833.0 )
+Vehicles: [21.0, 65.0]
+Corresponsing times: [29.302325581395348, 30]
+Fog down for  16 s at 09:45 ( 35133.0 )
+Vehicles: [31.0, 44.0]
 Corresponsing times: [30, 30]
-Vehicles: [534, 166]
-Corresponsing times: [30, 28.45714285714286]
-Vehicles: [381, 264]
+Vehicles: [99, 332]
+Corresponsing times: [27.563805104408353, 30]
+Vehicles: [67, 267]
+Corresponsing times: [24.07185628742515, 30]
+Vehicles: [153, 175]
 Corresponsing times: [30, 30]
-Vehicles: [447, 158]
+Vehicles: [298, 179]
 Corresponsing times: [30, 30]
-Vehicles: [389, 194]
+Vehicles: [344, 194]
 Corresponsing times: [30, 30]
-Vehicles: [215, 221]
+Vehicles: [544, 229]
 Corresponsing times: [30, 30]
-Vehicles: [265, 175]
+Vehicles: [553, 184]
+Corresponsing times: [30, 29.959294436906376]
+Vehicles: [491, 175]
 Corresponsing times: [30, 30]
-Vehicles: [173, 200]
+Vehicles: [460, 236]
 Corresponsing times: [30, 30]
-Vehicles: [211, 206]
+Vehicles: [370, 152]
 Corresponsing times: [30, 30]
-Fog down for  598 s at 12:02 ( 43332.0 )
-Couldn't predict at time  12:03 ( 43392.0 )
-Couldn't predict at time  12:04 ( 43452.0 )
-Couldn't predict at time  12:05 ( 43512.0 )
-Couldn't predict at time  12:06 ( 43572.0 )
-Couldn't predict at time  12:07 ( 43632.0 )
-Couldn't predict at time  12:08 ( 43692.0 )
-Couldn't predict at time  12:09 ( 43752.0 )
+Vehicles: [564, 186]
+Corresponsing times: [30, 29.759999999999998]
+Vehicles: [391, 221]
+Corresponsing times: [30, 30]
+Vehicles: [492, 162]
+Corresponsing times: [30, 29.724770642201836]
+Vehicles: [469, 158]
+Corresponsing times: [30, 30]
+Vehicles: [378, 206]
+Corresponsing times: [30, 30]
+Vehicles: [406, 226]
+Corresponsing times: [30, 30]
+Vehicles: [428, 167]
+Corresponsing times: [30, 30]
+Vehicles: [358, 187]
+Corresponsing times: [30, 30]
+Vehicles: [507, 169]
+Corresponsing times: [30, 30]
+Vehicles: [487, 203]
+Corresponsing times: [30, 30]
+Vehicles: [364, 218]
+Corresponsing times: [30, 30]
+Vehicles: [404, 189]
+Corresponsing times: [30, 30]
+Vehicles: [499, 187]
+Corresponsing times: [30, 30]
+Vehicles: [371, 226]
+Corresponsing times: [30, 30]
+Vehicles: [239, 181]
+Corresponsing times: [30, 30]
+Fog down for  618 s at 11:56 ( 43008.0 )
+Vehicles: [15.0, 39.0]
+Corresponsing times: [30, 30]
+Fog down for  318 s at 12:01 ( 43308.0 )
+Couldn't predict at time  12:02 ( 43368.0 )
+Couldn't predict at time  12:03 ( 43428.0 )
 Simulation over

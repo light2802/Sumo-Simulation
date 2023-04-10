@@ -1,17 +1,17 @@
-Added 1661 vehicles from proj/J/j1/j1_17_one.csv
-Added 9230 vehicles from proj/J/j1/j1_17.csv
-Added 10160 vehicles from proj/J/j2/j2_17_one.csv
-Added 14670 vehicles from proj/J/j2/j2_17.csv
-Added 20923 vehicles from proj/J/j3/j3_17.csv
-Added 21407 vehicles from proj/A/a2/a2_17_one.csv
-Added 23602 vehicles from proj/A/a2/a2_17.csv
-Added 27057 vehicles from proj/A/a3/a3_17_one.csv
-Added 46991 vehicles from proj/A/a3/a3_17.csv
-Added 47766 vehicles from proj/R/r1/r1_17_one.csv
-Added 51590 vehicles from proj/R/r1/r1_17.csv
-Added 53144 vehicles from proj/R/r2/r2_17_one.csv
-Added 60968 vehicles from proj/R/r2/r2_17.csv
-Added 66355 vehicles from proj/R/r3/r3_17.csv
+Added 1661 vehicles from SUMO-Dataset/traffic/J/j1/j1_17_one.csv
+Added 9230 vehicles from SUMO-Dataset/traffic/J/j1/j1_17.csv
+Added 10160 vehicles from SUMO-Dataset/traffic/J/j2/j2_17_one.csv
+Added 14670 vehicles from SUMO-Dataset/traffic/J/j2/j2_17.csv
+Added 20923 vehicles from SUMO-Dataset/traffic/J/j3/j3_17.csv
+Added 21407 vehicles from SUMO-Dataset/traffic/A/a2/a2_17_one.csv
+Added 23602 vehicles from SUMO-Dataset/traffic/A/a2/a2_17.csv
+Added 27057 vehicles from SUMO-Dataset/traffic/A/a3/a3_17_one.csv
+Added 46991 vehicles from SUMO-Dataset/traffic/A/a3/a3_17.csv
+Added 47766 vehicles from SUMO-Dataset/traffic/R/r1/r1_17_one.csv
+Added 51590 vehicles from SUMO-Dataset/traffic/R/r1/r1_17.csv
+Added 53144 vehicles from SUMO-Dataset/traffic/R/r2/r2_17_one.csv
+Added 60968 vehicles from SUMO-Dataset/traffic/R/r2/r2_17.csv
+Added 66355 vehicles from SUMO-Dataset/traffic/R/r3/r3_17.csv
 Routes created
 
 read 66355 elements.
@@ -25,26 +25,26 @@ Routes sorte
   client connected
   client connected
   client connected
-Loading net-file from 'data/../new/cross.net.xml' ... done (32ms).
-Loading additional-files from 'data/cross.det.xml' ... done (3ms).
+Loading net-file from 'data/../new/cross.net.xml' ... done (22ms).
+Loading additional-files from 'data/cross.det.xml' ... done (2ms).
 Loading done.
 Simulation version 1.15.0 started with time: 0.00.
-Simulation ended at time: 45600.00
+Simulation ended at time: 43440.00
 Reason: TraCI requested termination.
 Performance: 
- Duration: 136.25s
- TraCI-Duration: 13.91s
- Real time factor: 334.674
- UPS: 138478.657194
+ Duration: 92.20s
+ TraCI-Duration: 15.13s
+ Real time factor: 471.155
+ UPS: 135000.000000
 Vehicles: 
  Inserted: 66355
  Running: 0
  Waiting: 0
 Statistics (avg of 66355):
  RouteLength: 1017.89
- Speed: 6.17
- Duration: 284.35
- WaitingTime: 132.42
- TimeLoss: 211.41
- DepartDelay: 6.18
+ Speed: 7.09
+ Duration: 187.58
+ WaitingTime: 61.13
+ TimeLoss: 114.63
+ DepartDelay: 6.04
 

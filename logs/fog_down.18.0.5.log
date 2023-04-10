@@ -1,17 +1,17 @@
-Added 1285 vehicles from proj/J/j1/j1_18_one.csv
-Added 6147 vehicles from proj/J/j1/j1_18.csv
-Added 6849 vehicles from proj/J/j2/j2_18_one.csv
-Added 10024 vehicles from proj/J/j2/j2_18.csv
-Added 14722 vehicles from proj/J/j3/j3_18.csv
-Added 14916 vehicles from proj/A/a2/a2_18_one.csv
-Added 15599 vehicles from proj/A/a2/a2_18.csv
-Added 18327 vehicles from proj/A/a3/a3_18_one.csv
-Added 35206 vehicles from proj/A/a3/a3_18.csv
-Added 35745 vehicles from proj/R/r1/r1_18_one.csv
-Added 37954 vehicles from proj/R/r1/r1_18.csv
-Added 39294 vehicles from proj/R/r2/r2_18_one.csv
-Added 44874 vehicles from proj/R/r2/r2_18.csv
-Added 48564 vehicles from proj/R/r3/r3_18.csv
+Added 1285 vehicles from SUMO-Dataset/traffic/J/j1/j1_18_one.csv
+Added 6147 vehicles from SUMO-Dataset/traffic/J/j1/j1_18.csv
+Added 6849 vehicles from SUMO-Dataset/traffic/J/j2/j2_18_one.csv
+Added 10024 vehicles from SUMO-Dataset/traffic/J/j2/j2_18.csv
+Added 14722 vehicles from SUMO-Dataset/traffic/J/j3/j3_18.csv
+Added 14916 vehicles from SUMO-Dataset/traffic/A/a2/a2_18_one.csv
+Added 15599 vehicles from SUMO-Dataset/traffic/A/a2/a2_18.csv
+Added 18327 vehicles from SUMO-Dataset/traffic/A/a3/a3_18_one.csv
+Added 35206 vehicles from SUMO-Dataset/traffic/A/a3/a3_18.csv
+Added 35745 vehicles from SUMO-Dataset/traffic/R/r1/r1_18_one.csv
+Added 37954 vehicles from SUMO-Dataset/traffic/R/r1/r1_18.csv
+Added 39294 vehicles from SUMO-Dataset/traffic/R/r2/r2_18_one.csv
+Added 44874 vehicles from SUMO-Dataset/traffic/R/r2/r2_18.csv
+Added 48564 vehicles from SUMO-Dataset/traffic/R/r3/r3_18.csv
 Routes created
 
 read 48564 elements.
@@ -29,22 +29,22 @@ Loading net-file from 'data/../new/cross.net.xml' ... done (22ms).
 Loading additional-files from 'data/cross.det.xml' ... done (2ms).
 Loading done.
 Simulation version 1.15.0 started with time: 0.00.
-Simulation ended at time: 44682.00
+Simulation ended at time: 43416.00
 Reason: TraCI requested termination.
 Performance: 
- Duration: 55.18s
- TraCI-Duration: 12.55s
- Real time factor: 809.823
- UPS: 144636.085184
+ Duration: 51.91s
+ TraCI-Duration: 13.65s
+ Real time factor: 836.306
+ UPS: 134826.289633
 Vehicles: 
  Inserted: 48564
  Running: 0
  Waiting: 0
 Statistics (avg of 48564):
  RouteLength: 1017.81
- Speed: 7.67
- Duration: 164.32
- WaitingTime: 49.11
- TimeLoss: 91.38
- DepartDelay: 5.09
+ Speed: 8.08
+ Duration: 144.13
+ WaitingTime: 33.38
+ TimeLoss: 71.18
+ DepartDelay: 5.13
 
