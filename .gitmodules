@@ -1,4 +1,0 @@
-[submodule "proj"]
-	path = Traffic-Dataset/proj
-	url = git@github.com:light2802/Traffic-Dataset.git
-	branch = main
