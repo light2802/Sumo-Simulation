@@ -122,7 +122,7 @@ def fog_control(host, port, jId, date, prob):
 
     skip = 1
     probability = prob
-    data = pd.read_csv("./predictions/BTPROJ_predictions_knn.csv")
+    data = pd.read_csv("./SUMO-Dataset/prediction/predictions/BTPROJ_predictions_knn.csv")
     #Start simulation
     while traci.simulation.getMinExpectedNumber() > 0:
         # Skip to when vehicles come

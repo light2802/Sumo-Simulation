@@ -99,12 +99,12 @@ def generate_routefile(date):
         vehNr = 0
         for c in ["J", "A", "R"]:
             for n in range(1, 4):
-                vehNr =  add_vehicles("proj/%s/%s%i/%s%i_%i_one.csv" % (c,
+                vehNr =  add_vehicles("SUMO-Dataset/traffic/%s/%s%i/%s%i_%i_one.csv" % (c,
                                                                         c.lower(),
                                                                         n,
                                                                         c.lower(),
                                                                         n, date), c, routes, vehNr)
-                vehNr =  add_vehicles("proj/%s/%s%i/%s%i_%i.csv" % (c, c.lower(), n, c.lower(), n, date), c, routes, vehNr)
+                vehNr =  add_vehicles("SUMO-Dataset/traffic/%s/%s%i/%s%i_%i.csv" % (c, c.lower(), n, c.lower(), n, date), c, routes, vehNr)
         print("</routes>", file=routes)
 
 # The program looks like this
