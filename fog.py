@@ -77,7 +77,7 @@ def fog_control(host, port, jId, date, prob):
         return value
     
     def getFailureNode(ID):
-        if ID == "j":
+        """ if ID == "j":
             #[(id, dir), (id, dir), ...]
             #U D R L
             return [(4,4), (2,2), (3,2), (3,1)]
@@ -86,9 +86,15 @@ def fog_control(host, port, jId, date, prob):
             return [(1,4), (1,3), (0,1), (0,2)]
         else:
             #return [(7,4), (6,1), (5,2), (6,4)]
-            return [(7,4), (5,2), (6,4), (6,1)]
+            return [(7,4), (5,2), (6,4), (6,1)] """
+        if ID == "a":
+            return [0, 1]
+        elif ID == "j":
+            return [2, 3, 4]
+        else:
+            return [5, 6, 7]
     
-    def getPredictions(IDS, times):
+    """ def getPredictions(IDS, times):
         pred = []
         for i in range(4):
             vehicles = data.loc[(data['Junction'] == IDS[i][0]) & (data['Direction'] == IDS[i][1]) &
@@ -97,6 +103,19 @@ def fog_control(host, port, jId, date, prob):
                 simulationDelay(60)
                 return pred
             predicted = vehicles.iloc[0]['predicted']
+            pred.append(predicted)
+        final = [(pred[0] + pred[1]), (pred[2] + pred[3])]
+        return final """
+    
+    def getPredictions(IDS, times):
+        pred = []
+        length = len(IDS)
+        for i in range(4):
+            predicted = 0
+            for j in range(length):
+                vehicles = data.loc[(data['Junction'] == IDS[j]) & (data['Direction'] == (i+1)) &
+                                        (data['Date'] == times[0]) & (data['Time'] == times[1])]
+                predicted += vehicles.iloc[0]['predicted']
             pred.append(predicted)
         final = [(pred[0] + pred[1]), (pred[2] + pred[3])]
         return final
