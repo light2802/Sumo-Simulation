@@ -5,7 +5,7 @@ import datetime
 import numpy as np
 import random
 
-def fog_control(host, port, jId, prob):
+def fog_control(host, port, jId, date, prob):
     traci.init(host = host, port = port)
     traci.setOrder(random.randint(2, 100))
 
@@ -70,7 +70,7 @@ def fog_control(host, port, jId, prob):
         #traci.simulation.getTime()
 
         #TODO Fix date
-        curDate = '01-11-2023'#datetime.datetime.now().strftime('%m-%d-%Y') 
+        curDate = '01-'+str(date)+'-2023'#datetime.datetime.now().strftime('%m-%d-%Y') 
         curHour = secToHMS(traci.simulation.getTime())
         curHour += ":00"
         value = [curDate, curHour]
@@ -152,11 +152,12 @@ def get_options():
                          help="Junction Id")
     optParser.add_option("--prob", action="store", default=0.0,
                          help="Downtime probability")
-
+    optParser.add_option("--date", action="store", default=11,
+                            help="give date for simulation")
     options, args = optParser.parse_args()
     return options
 
 # this is the main entry point of this script
 if __name__ == "__main__":
     options = get_options()
-    fog_control(options.host, options.port, options.jId, float(options.prob))
+    fog_control(options.host, options.port, options.jId, options.date, float(options.prob))
