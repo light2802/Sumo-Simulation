@@ -115,6 +115,9 @@ def fog_control(host, port, jId, date, prob):
             for j in range(length):
                 vehicles = data.loc[(data['Junction'] == IDS[j]) & (data['Direction'] == (i+1)) &
                                         (data['Date'] == times[0]) & (data['Time'] == times[1])]
+                if vehicles.empty :
+                    simulationDelay(60)
+                    return pred
                 predicted += vehicles.iloc[0]['predicted']
             pred.append(predicted)
         final = [(pred[0] + pred[1]), (pred[2] + pred[3])]

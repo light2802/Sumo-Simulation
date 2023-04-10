@@ -7,8 +7,8 @@ do
 		echo "Date : $date"
 		echo "Probability : $prob"
 		python -u runner.py --nogui --numClients 4 --date $date | tee logs/fog_down.$date.$prob.log& \
-		python fog.py --jId j --prob $prob > logs/fog_down.$date.$prob.timings.j.log& \
-		python fog.py --jId a --prob $prob > logs/fog_down.$date.$prob.timings.a.log& \
-		python fog.py --jId r --prob $prob > logs/fog_down.$date.$prob.timings.r.log
+		python fog.py --jId j --prob $prob --date $date > logs/fog_down.$date.$prob.timings.j.log& \
+		python fog.py --jId a --prob $prob --date $date > logs/fog_down.$date.$prob.timings.a.log& \
+		python fog.py --jId r --prob $prob --date $date > logs/fog_down.$date.$prob.timings.r.log
 	done
 done
