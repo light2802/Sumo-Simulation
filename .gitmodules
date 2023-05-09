@@ -2,3 +2,5 @@
 	path = SUMO-Dataset
 	url = git@github.com:light2802/SUMO-Dataset.git
 	branch = main
+[submodule "SUMO-Dataset/"]
+	url = https://github.com/light2802/SUMO-Dataset.git
